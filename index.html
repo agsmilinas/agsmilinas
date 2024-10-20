@@ -19,15 +19,16 @@
             padding: 0;
             color: #fff;
             background-color: #000;
+            position: relative;
         }
 
         /* Galaxy-Themed Dynamic Background */
         #gradient {
             width: 100%;
-            height: 1080px;
             padding: 0px;
             margin: 0px;
             z-index: 2;
+            position: relative;
         }
 
         /* Stars, Twinkling, and Clouds Layers */
@@ -40,22 +41,20 @@
             width: 100%;
             height: 100%;
             display: block;
+            z-index: 0; /* Background layers */
         }
 
         .stars {
             background: #000 url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
-            z-index: 0;
         }
 
         .twinkling {
             background: transparent url('http://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
-            z-index: 1;
             animation: move-twink-back 200s linear infinite;
         }
 
         .clouds {
             background: transparent url('https://www.script-tutorials.com/demos/360/images/clouds3.png') repeat top center;
-            z-index: 3;
             animation: move-clouds-back 200s linear infinite;
         }
 
@@ -72,9 +71,7 @@
 
         .galaxy {
             z-index: 1;
-            position: absolute;
-            left: 0;
-            right: 0;
+            position: relative; /* Set to relative to keep content visible */
             width: 100%;
             height: 1080px;
             margin: 0 auto;
@@ -130,13 +127,7 @@
             100% { opacity: 1; }
         }
 
-        /* Gradient Animation */
-        @keyframes colorChange {
-            0% { background: linear-gradient(90deg, #000, #fff); }
-            100% { background: linear-gradient(90deg, #fff, #000); }
-        }
-
-        /* Main Page Styles (Updated) */
+        /* Main Page Content Styles */
         header {
             background-color: rgba(76, 175, 80, 0.8);
             color: #fff;
@@ -144,7 +135,7 @@
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
             position: relative;
-            z-index: 5;
+            z-index: 5; /* Higher z-index to ensure visibility over background */
         }
 
         nav {
@@ -153,6 +144,8 @@
             background-color: rgba(255, 255, 255, 0.1);
             padding: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 5;
         }
 
         nav a {
@@ -175,6 +168,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
             z-index: 5;
+            position: relative;
         }
 
         h1, h2 {
