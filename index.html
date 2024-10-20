@@ -17,7 +17,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #fff; /* White font */
             position: relative;
             z-index: 5;
         }
@@ -25,27 +25,29 @@
         header {
             background-color: #4CAF50;
             color: #fff;
-            padding: 15px 0;
+            padding: 20px 0;
             text-align: center;
             position: relative;
             z-index: 5; /* Front */
+            font-size: 2em; /* Increased font size */
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #f4f4f4;
-            padding: 10px;
+            background-color: #333;
+            padding: 15px;
             position: relative;
             z-index: 5;
         }
 
         nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
-            color: #333;
+            color: #fff;
             font-weight: bold;
             transition: color 0.3s;
+            font-size: 1.2em; /* Increased font size */
         }
 
         nav a:hover {
@@ -53,11 +55,12 @@
         }
 
         section {
-            padding: 20px;
+            padding: 30px;
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 30px auto;
             position: relative;
             z-index: 5;
+            font-size: 1.2em; /* Increased font size */
         }
 
         h1, h2 {
@@ -81,33 +84,33 @@
         }
 
         .contact-info {
-            background: #f0f0f0;
-            padding: 20px;
-            border: 1px solid #ddd;
-            margin: 20px 0;
+            background: #4CAF50;
+            color: #fff;
+            padding: 30px;
+            margin: 20px auto;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            font-size: 1.1em;
+            text-align: center; /* Centering the section */
+            max-width: 600px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         .contact-info h2 {
-            margin-bottom: 15px;
-            font-size: 1.8em;
-            color: #4CAF50;
+            margin-bottom: 20px;
+            font-size: 2em; /* Increased font size */
         }
 
         .contact-info p {
-            margin: 10px 0;
-            line-height: 1.6;
+            margin: 15px 0;
+            font-size: 1.2em; /* Increased font size */
         }
 
         .contact-info a {
-            color: #4CAF50;
-            text-decoration: none;
+            color: #fff;
+            text-decoration: underline;
         }
 
         .contact-info a:hover {
-            text-decoration: underline;
+            color: #f0f0f0;
         }
 
         footer {
@@ -117,6 +120,7 @@
             text-align: center;
             position: relative;
             z-index: 5;
+            font-size: 1.2em; /* Increased font size */
         }
 
         footer p {
@@ -125,11 +129,11 @@
 
         footer a {
             color: #4CAF50;
-            text-decoration: none;
+            text-decoration: underline;
         }
 
         footer a:hover {
-            text-decoration: underline;
+            color: #fff;
         }
 
         /* Responsive design */
@@ -144,7 +148,7 @@
             }
 
             section {
-                padding: 15px;
+                padding: 20px;
                 margin: 10px;
             }
         }
