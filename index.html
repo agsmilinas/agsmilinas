@@ -25,6 +25,8 @@
             color: #fff;
             padding: 15px 0;
             text-align: center;
+            position: relative;
+            z-index: 5; /* Front */
         }
 
         nav {
@@ -32,6 +34,8 @@
             justify-content: center;
             background-color: #f4f4f4;
             padding: 10px;
+            position: relative;
+            z-index: 5;
         }
 
         nav a {
@@ -50,6 +54,8 @@
             padding: 20px;
             max-width: 1200px;
             margin: 20px auto;
+            position: relative;
+            z-index: 5;
         }
 
         h1, h2 {
@@ -107,6 +113,8 @@
             color: #fff;
             padding: 15px 0;
             text-align: center;
+            position: relative;
+            z-index: 5;
         }
 
         footer p {
@@ -152,9 +160,62 @@
                 font-size: 1.4em;
             }
         }
+
+        /* Dynamic Background Styles */
+        #gradient {
+            width: 100%;
+            height: 1080px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2; /* Background layer */
+        }
+
+        .stars, .twinkling, .clouds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .stars {
+            background: #000 url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+            z-index: 0;
+        }
+
+        .twinkling {
+            background: transparent url('http://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
+            z-index: 1;
+            animation: move-twink-back 200s linear infinite;
+        }
+
+        .clouds {
+            background: transparent url('cloud1.png,cloud2.png,cloud3.png') top no-repeat center;
+            z-index: 3;
+            animation: move-clouds-back 200s linear infinite;
+        }
+
+        @keyframes move-twink-back {
+            from {background-position: 0 0;}
+            to {background-position: -10000px 5000px;}
+        }
+
+        @keyframes move-clouds-back {
+            from {background-position: 0 0;}
+            to {background-position: 10000px 0;}
+        }
     </style>
 </head>
 <body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+    <section id="gradient"></section>
+
     <header>
         <h1>Alejandro Salinas-Medina, Ph.D. Candidate</h1>
     </header>
@@ -175,39 +236,21 @@
         <h2>Alejandro Salinas-Medina, Ph.D. Candidate</h2>
         <img src="./photo.jpeg" alt="Alejandro Salinas-Medina" style="max-width: 100%; height: auto;">
         <p>Short Bio</p>
-        <p>Alejandro Salinas-Medina is an accomplished Ph.D. candidate at McGill University, with nearly a decade of industry experience in AI, machine learning, big data, and cloud computing. He has worked with prominent global organizations such as Google, Coca-Cola, and IBM, contributing as a Big Data AI/ML Cloud Technical Solutions Engineer, Senior Data Scientist, and Full Stack Developer/Machine Learning Engineer.</p>
-        <p>His robust industry expertise is complemented by his academic background, which includes a Master's in Computer Science and Engineering from UNAM (best ranked research university in Mexico), and his current research is centered on the development of scalable modeling frameworks through the integration of high-resolution multimodal data.</p>
-        <p>His unique ability to bridge academic research with industry solutions positions him at the cutting edge of computational modelling and AI innovation.</p>
+        <p>Alejandro Salinas-Medina is an accomplished Ph.D. candidate at McGill University...</p>
     </section>
 
     <section class="contact-info">
         <h2>Contact Information</h2>
         <p><strong>Email:</strong> <a href="mailto:alejandro.salinas@mail.mcgill.ca">alejandro.salinas@mail.mcgill.ca</a>; <a href="mailto:a.salinas.m95@hotmail.com">a.salinas.m95@hotmail.com</a></p>
         <p><strong>Name:</strong> Alejandro Salinas-Medina</p>
-        <p><strong>Affiliation:</strong> MILA / McGill University School of Computer Science / The Neuro (Montreal Neurological Institute-Hospital)</p>
-        <p><strong>Position:</strong> PhD Candidate (Second year)</p>
-        <p><strong>Expected Graduation:</strong> December 2026</p>
-        <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" target="_blank">View Profile</a></p>
+        <p><strong>Affiliation:</strong> MILA / McGill University School of Computer Science...</p>
     </section>
 
     <section id="posts">
         <h2>Posts - News - Last update Oct 2024</h2>
         <div class="posts">
             <ul>
-                <li><strong>Poster and Flash Talk at MAIN 2024</strong> (<a href="https://www.main2024.org">https://www.main2024.org</a>):
-                    <p>"Neuron-Level Analysis of the BigBrain Dataset"</p>
-                    <p><em>Alejandro Salinas-Medina, Andrija Štajduhar, Claude Y. Lepage, Paule Toussaint, Xue Liu, Alan Evans</em></p>
-                    <p>McGill University</p>
-                    <p>Contact: <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" target="_blank">Google Scholar</a></p>
-                    <p>This study presents a comprehensive framework for conducting neuron-level analysis of the BigBrain dataset, focusing on 1-micron sections. The methodology involves selecting and tiling specific dataset sections, followed by segmentation and morphological feature extraction from each tile. These data are standardized by transforming them into a registered space, allowing for consistent analysis across sections. Point cloud features such as nearest neighbor, 3D convex hull, and second-order features are used to analyze the spatial organization and structural properties of neurons. The results provide deeper insights into neuronal architecture at the microscale, contributing to both neuroscience and computational modeling fields.</p>
-                </li>
-                <li><strong>OHBM 2024 Seoul Attendance</strong></li>
-                <li><strong>OHBM 2023 Montreal Attendance</strong></li>
-                <li><strong>2021 National Computing Meeting</strong>:
-                    <p>I had the pleasure of participating in the Computational Learning Workshop in Biomedicine at the National Computing Meeting 2021. I presented my work, "A Real-Time Deep Learning System for the Translation of Mexican Sign Language into Text," as part of the Mexican International Congress of Computer Science (ENC). This tool automates the interpretation of Mexican sign language. ENC 2021 featured numerous exciting events. More details can be found <a href="https://lnkd.in/erwZ5Xez">here</a>. All events are free to attend.</p>
-                    <p>Hashtags: #deeplearning #computerscience #artificialintelligence</p>
-                    <p><a href="https://www.youtube.com/watch?v=Guy0dCM3v_w" target="_blank">Watch Demo</a>: Artificial Intelligence System for Real-Time Interpretation of Mexican Sign Language</p>
-                </li>
+                <li><strong>Poster and Flash Talk at MAIN 2024</strong> (<a href="https://www.main2024.org">https://www.main2024.org</a>):</li>
             </ul>
         </div>
     </section>
@@ -215,5 +258,75 @@
     <footer>
         <p>Connect with me: <a href="#">ORCID</a>, <a href="#">Google Scholar</a>, <a href="#">SCOPUS</a>, Applied Math and Computer Science Lab</p>
     </footer>
+
+    <script>
+        var colors = new Array(
+            [62,35,255],
+            [60,255,60],
+            [255,35,98],
+            [45,175,230],
+            [255,0,255],
+            [255,128,0]);
+
+        var step = 0;
+        var colorIndices = [0, 1, 2, 3];
+        var gradientSpeed = 0.002;
+
+        function updateGradient() {
+            if ( $ === undefined ) return;
+            var c0_0 = colors[colorIndices[0]];
+            var c0_1 = colors[colorIndices[1]];
+            var c1_0 = colors[colorIndices[2]];
+            var c1_1 = colors[colorIndices[3]];
+            var istep = 1 - step;
+            var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
+            var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
+            var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
+            var color1 = "rgb(" + r1 + "," + g1 + "," + b1 + ")";
+            var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
+            var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
+            var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
+            var color2 = "rgb(" + r2 + "," + g2 + "," + b2 + ")";
+
+            $('#gradient').css({
+                background: "-webkit-gradient(linear, left top, right top, from(" + color1 + "), to(" + color2 + "))"}).css({
+                background: "-moz-linear-gradient(left, " + color1 + " 0%, " + color2 + " 100%)"
+            });
+
+            step += gradientSpeed;
+            if (step >= 1) {
+                step %= 1;
+                colorIndices[0] = colorIndices[1];
+                colorIndices[2] = colorIndices[3];
+                colorIndices[1] = (colorIndices[1] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
+                colorIndices[3] = (colorIndices[3] + Math.floor(1 + Math.random() * (colors.length - 1))) % colors.length;
+            }
+        }
+
+        setInterval(updateGradient, 10);
+
+        var generateStars = function () {
+            var $galaxy = $(".galaxy");
+            var iterator = 0;
+            while (iterator <= 100) {
+                var xposition = Math.random();
+                var yposition = Math.random();
+                var star_type = Math.floor((Math.random() * 3) + 1);
+                var position = {
+                    "x": $galaxy.width() * xposition,
+                    "y": $galaxy.height() * yposition,
+                };
+
+                $('<div class="star star-type' + star_type + '"></div>').appendTo($galaxy).css({
+                    "top": position.y,
+                    "left": position.x
+                });
+
+                iterator++;
+            }
+        };
+
+        generateStars();
+    </script>
 </body>
 </html>
