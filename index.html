@@ -18,42 +18,133 @@
             margin: 0;
             padding: 0;
             color: #fff;
-            background: #000;
-            overflow: hidden;
+            background-color: #000;
         }
 
-        /* Galaxy-themed background animation */
-        body::before {
-            content: '';
+        /* Galaxy-Themed Dynamic Background */
+        #gradient {
+            width: 100%;
+            height: 1080px;
+            padding: 0px;
+            margin: 0px;
+            z-index: 2;
+        }
+
+        /* Stars, Twinkling, and Clouds Layers */
+        .stars, .twinkling, .clouds {
             position: absolute;
             top: 0;
             left: 0;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.15) 1%, rgba(0,0,0,0.1) 100%), url('https://cdn.pixabay.com/photo/2016/02/13/12/26/galaxy-1194035_1280.jpg') no-repeat center center/cover;
-            z-index: -1;
-            animation: galaxyBackground 60s linear infinite;
-            opacity: 0.6;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
         }
 
-        @keyframes galaxyBackground {
-            0% {
-                transform: scale(1) translateX(0);
-            }
-            50% {
-                transform: scale(1.5) translateX(-50%);
-            }
-            100% {
-                transform: scale(1) translateX(0);
-            }
+        .stars {
+            background: #000 url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+            z-index: 0;
         }
 
+        .twinkling {
+            background: transparent url('http://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
+            z-index: 1;
+            animation: move-twink-back 200s linear infinite;
+        }
+
+        .clouds {
+            background: transparent url('https://www.script-tutorials.com/demos/360/images/clouds3.png') repeat top center;
+            z-index: 3;
+            animation: move-clouds-back 200s linear infinite;
+        }
+
+        /* Animation for twinkling stars */
+        @keyframes move-twink-back {
+            from { background-position: 0 0; }
+            to { background-position: -10000px 5000px; }
+        }
+
+        @keyframes move-clouds-back {
+            from { background-position: 0 0; }
+            to { background-position: 10000px 0; }
+        }
+
+        .galaxy {
+            z-index: 1;
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 1080px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+        }
+
+        /* Twinkling Star Variations */
+        .star-type1 {
+            width: 1px;
+            height: 1px;
+            border-radius: 2px;
+            box-shadow: 0 0 1px 1px white;
+            animation: twinkle_one 3s ease-in-out infinite;
+        }
+
+        .star-type2 {
+            width: 2px;
+            height: 2px;
+            border-radius: 2px;
+            box-shadow: 0 0 2px 1px white;
+            animation: twinkle_two 12s ease-in-out infinite;
+        }
+
+        .star-type3 {
+            width: 2px;
+            height: 2px;
+            border-radius: 2px;
+            box-shadow: 0 0 2px 0 white;
+            animation: twinkle_three 7s ease-in-out infinite;
+        }
+
+        /* Twinkling Animations */
+        @keyframes twinkle_one {
+            0%, 30% { opacity: 1; }
+            70% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes twinkle_two {
+            0%, 25% { opacity: 1; }
+            80% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes twinkle_three {
+            0%, 30% { opacity: 1; }
+            40% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Gradient Animation */
+        @keyframes colorChange {
+            0% { background: linear-gradient(90deg, #000, #fff); }
+            100% { background: linear-gradient(90deg, #fff, #000); }
+        }
+
+        /* Main Page Styles (Updated) */
         header {
             background-color: rgba(76, 175, 80, 0.8);
             color: #fff;
             padding: 15px 0;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            position: relative;
+            z-index: 5;
         }
 
         nav {
@@ -83,77 +174,12 @@
             background-color: rgba(0, 0, 0, 0.6);
             border-radius: 8px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+            z-index: 5;
         }
 
         h1, h2 {
             text-align: center;
             margin-bottom: 20px;
-        }
-
-        .quote {
-            font-style: italic;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .posts ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .posts ul li {
-            margin: 10px 0;
-        }
-
-        .contact-info {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border: 1px solid #ddd;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-            font-size: 1.1em;
-            color: #fff;
-        }
-
-        .contact-info h2 {
-            margin-bottom: 15px;
-            font-size: 1.8em;
-            color: #4CAF50;
-        }
-
-        .contact-info p {
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-
-        .contact-info a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background: rgba(51, 51, 51, 0.8);
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
         }
 
         /* Responsive design */
@@ -189,65 +215,52 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Alejandro Salinas-Medina, Ph.D. Candidate</h1>
-    </header>
+    <!-- Galaxy Effect Background Layers -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#education">Education/Certifications</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <a href="#editorial">Editorial Services</a>
-        <a href="#courses">Courses</a>
-        <a href="#reviews">Peer Reviews</a>
-        <a href="#software">Software</a>
-        <a href="#posts">Posts/News</a>
-    </nav>
+    <!-- Main Page Content -->
+    <section id="gradient">
+        <div class="galaxy"></div>
 
-    <section id="home">
-        <h2>Alejandro Salinas-Medina, Ph.D. Candidate</h2>
-        <img src="./photo.jpeg" alt="Alejandro Salinas-Medina" style="max-width: 100%; height: auto;">
-        <p>Short Bio</p>
-        <p>Alejandro Salinas-Medina is an accomplished Ph.D. candidate at McGill University, with nearly a decade of industry experience in AI, machine learning, big data, and cloud computing. He has worked with prominent global organizations such as Google, Coca-Cola, and IBM, contributing as a Big Data AI/ML Cloud Technical Solutions Engineer, Senior Data Scientist, and Full Stack Developer/Machine Learning Engineer.</p>
-        <p>His robust industry expertise is complemented by his academic background, which includes a Master's in Computer Science and Engineering from UNAM (best ranked research university in Mexico), and his current research is centered on the development of scalable modeling frameworks through the integration of high-resolution multimodal data.</p>
-        <p>His unique ability to bridge academic research with industry solutions positions him at the cutting edge of computational modelling and AI innovation.</p>
+        <header>
+            <h1>Alejandro Salinas-Medina, Ph.D. Candidate</h1>
+        </header>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#education">Education/Certifications</a>
+            <a href="#experience">Experience</a>
+            <a href="#publications">Publications</a>
+            <a href="#editorial">Editorial Services</a>
+            <a href="#courses">Courses</a>
+            <a href="#reviews">Peer Reviews</a>
+            <a href="#software">Software</a>
+        </nav>
+
+        <section id="home">
+            <h2>Alejandro Salinas-Medina, Ph.D. Candidate</h2>
+            <img src="./photo.jpeg" alt="Alejandro Salinas-Medina" style="max-width: 100%; height: auto;">
+            <p>Alejandro Salinas-Medina is an accomplished Ph.D. candidate at McGill University...</p>
+        </section>
     </section>
 
-    <section class="contact-info">
-        <h2>Contact Information</h2>
-        <p><strong>Email:</strong> <a href="mailto:alejandro.salinas@mail.mcgill.ca">alejandro.salinas@mail.mcgill.ca</a>; <a href="mailto:a.salinas.m95@hotmail.com">a.salinas.m95@hotmail.com</a></p>
-        <p><strong>Name:</strong> Alejandro Salinas-Medina</p>
-        <p><strong>Affiliation:</strong> MILA / McGill University School of Computer Science / The Neuro (Montreal Neurological Institute-Hospital)</p>
-        <p><strong>Position:</strong> PhD Candidate (Second year)</p>
-        <p><strong>Expected Graduation:</strong> December 2026</p>
-        <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" target="_blank">View Profile</a></p>
-    </section>
+    <script>
+        // Generate stars dynamically
+        var generateStars = function() {
+            var galaxy = document.querySelector('.galaxy');
+            for (var i = 0; i <= 100; i++) {
+                var starType = Math.floor((Math.random() * 3) + 1);
+                var star = document.createElement('div');
+                star.classList.add('star', 'star-type' + starType);
+                star.style.top = Math.random() * galaxy.clientHeight + 'px';
+                star.style.left = Math.random() * galaxy.clientWidth + 'px';
+                galaxy.appendChild(star);
+            }
+        };
 
-    <section id="posts">
-        <h2>Posts - News - Last update Oct 2024</h2>
-        <div class="posts">
-            <ul>
-                <li><strong>Poster and Flash Talk at MAIN 2024</strong> (<a href="https://www.main2024.org">https://www.main2024.org</a>):
-                    <p>"Neuron-Level Analysis of the BigBrain Dataset"</p>
-                    <p><em>Alejandro Salinas-Medina, Andrija Štajduhar, Claude Y. Lepage, Paule Toussaint, Xue Liu, Alan Evans</em></p>
-                    <p>McGill University</p>
-                    <p>Contact: <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" target="_blank">Google Scholar</a></p>
-                    <p>This study presents a comprehensive framework for conducting neuron-level analysis of the BigBrain dataset, focusing on 1-micron sections. The methodology involves selecting and tiling specific dataset sections, followed by segmentation and morphological feature extraction from each tile. These data are standardized by transforming them into a registered space, allowing for consistent analysis across sections. Point cloud features such as nearest neighbor, 3D convex hull, and second-order features are used to analyze the spatial organization and structural properties of neurons. The results provide deeper insights into neuronal architecture at the microscale, contributing to both neuroscience and computational modeling fields.</p>
-                </li>
-                <li><strong>OHBM 2024 Seoul Attendance</strong></li>
-                <li><strong>OHBM 2023 Montreal Attendance</strong></li>
-                <li><strong>2021 National Computing Meeting</strong>:
-                    <p>I had the pleasure of participating in the Computational Learning Workshop in Biomedicine at the National Computing Meeting 2021. I presented my work, "A Real-Time Deep Learning System for the Translation of Mexican Sign Language into Text," as part of the Mexican International Congress of Computer Science (ENC). This tool automates the interpretation of Mexican sign language. ENC 2021 featured numerous exciting events. More details can be found <a href="https://lnkd.in/erwZ5Xez">here</a>. All events are free to attend.</p>
-                    <p>Hashtags: #deeplearning #computerscience #artificialintelligence</p>
-                    <p><a href="https://www.youtube.com/watch?v=Guy0dCM3v_w" target="_blank">Watch Demo</a>: Artificial Intelligence System for Real-Time Interpretation of Mexican Sign Language</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <footer>
-        <p>Connect with me: <a href="#">ORCID</a>, <a href="#">Google Scholar</a>, <a href="#">SCOPUS</a>, Applied Math and Computer Science Lab</p>
-    </footer>
+        generateStars();
+    </script>
 </body>
 </html>
