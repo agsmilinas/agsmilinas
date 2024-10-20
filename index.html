@@ -6,23 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alejandro Salinas, Ph.D. Candidate</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
         header {
-            background: #333;
+            background-color: #4CAF50;
             color: #fff;
-            padding: 10px 0;
+            padding: 15px 0;
             text-align: center;
         }
 
         nav {
-            margin: 10px 0;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            background-color: #f4f4f4;
+            padding: 10px;
         }
 
         nav a {
@@ -30,16 +39,22 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4CAF50;
         }
 
         section {
             padding: 20px;
             max-width: 1200px;
-            margin: auto;
+            margin: 20px auto;
         }
 
         h1, h2 {
             text-align: center;
+            margin-bottom: 20px;
         }
 
         .quote {
@@ -48,12 +63,8 @@
             text-align: center;
         }
 
-        .posts {
-            margin: 40px 0;
-        }
-
         .posts ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
         }
 
@@ -62,20 +73,65 @@
         }
 
         .contact-info {
-            background: #f4f4f4;
+            background: #f9f9f9;
             padding: 20px;
             border: 1px solid #ddd;
             margin: 20px 0;
         }
 
+        .contact-info p {
+            margin: 10px 0;
+        }
+
         footer {
             background: #333;
             color: #fff;
-            padding: 10px 0;
+            padding: 15px 0;
             text-align: center;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+
+            section {
+                padding: 15px;
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 0;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
         }
     </style>
 </head>
@@ -97,18 +153,12 @@
 
     <section id="home">
         <h2>Alejandro Salinas-Medina, Ph.D. Candidate</h2>
-        <img src="./photo.jpeg" alt="">
+        <img src="./photo.jpeg" alt="Alejandro Salinas-Medina" style="max-width: 100%; height: auto;">
         <p>Short Bio</p>
-        <p>Alejandro Salinas-Medina is an accomplished Ph.D. candidate at McGill University, with nearly a decade of industry experience in AI, machine learning, big data, and cloud computing. 
-        
-            He has worked with prominent global organizations such as Google, Coca-Cola, and IBM, contributing as a Big Data AI/ML Cloud Technical Solutions Engineer, Senior Data Scientist, and Full Stack Developer/Machine Learning Engineer. 
-            
-            His robust industry expertise is complemented by his academic background, which includes a Master's in Computer Science and Engineering from UNAM (best ranked research univerity in México ), and his current research is centered on the development of scalable modeling frameworks through the integration of high-resolution multimodal data.
-
-            His unique ability to bridge academic research with industry solutions positions him at the cutting edge of computational modelling and  AI innovation.</p>
-                </section>
-
-
+        <p>Alejandro Salinas-Medina is an accomplished Ph.D. candidate at McGill University, with nearly a decade of industry experience in AI, machine learning, big data, and cloud computing. He has worked with prominent global organizations such as Google, Coca-Cola, and IBM, contributing as a Big Data AI/ML Cloud Technical Solutions Engineer, Senior Data Scientist, and Full Stack Developer/Machine Learning Engineer.</p>
+        <p>His robust industry expertise is complemented by his academic background, which includes a Master's in Computer Science and Engineering from UNAM (best ranked research university in Mexico), and his current research is centered on the development of scalable modeling frameworks through the integration of high-resolution multimodal data.</p>
+        <p>His unique ability to bridge academic research with industry solutions positions him at the cutting edge of computational modelling and AI innovation.</p>
+    </section>
 
     <section class="contact-info">
         <h2>Contact Information</h2>
@@ -124,27 +174,15 @@
         <h2>Publications</h2>
         <div class="posts">
             <ul>
-                <li>A. Salinas-Medina and A. Neme, "Enhancing Hospital Efficiency Through Web-Deployed Object Detection: A YOLOv8-Based Approach for Automating Healthcare Operations," 2023 Mexican International Conference on Computer Science (ENC), Guanajuato, Guanajuato, Mexico, 2023, pp. 1-6, doi: 10.1109/ENC60556.2023.10508642. keywords: {YOLO;Training;Hospitals;Computational modeling;Wheelchairs;Pressing;Resource management;YOLOv8 model;Web applications;Deep learning model;Detection and recognition;Hospital operation efficiency;Healthcare sector;Hospital management systems;Computers;Smartphones},
-
-
-                DOI: <a href="https://doi.org/10.1109/ENC60556.2023.10508642">https://doi.org/10.1109/XYZ</a></li>
-                
-                <li>S. -M. Alejandro and N. -C. J. Antonio, "A real-time deep learning system for the translation of mexican signal language into text," 2021 Mexican International Conference on Computer Science (ENC), Morelia, Mexico, 2021, pp. 1-7, doi: 10.1109/ENC53357.2021.9534825. keywords: {Transfer learning;Sociology;Gesture recognition;Assistive technologies;Tools;Feature extraction;Data models;Sign language interpretation;Machine learning;Convolutional neural networks;Deep Learning;Transfer learning;Singular Page Application;Flask},
-
-
-                DOI: <a href="https://doi.org/10.1109/ENC53357.2021.9534825">https://doi.org/10.1109/ENC53357.2021.9534825</a></li>
-                
-                <li>A. Salinas-Medina, H. Poblano-Rosas, M. R. Bustamante-Bello, L. A. Curiel-Ramirez, S. A. Navarro-Tuch and J. Izquierdo-Reyes, "A Live Emotions Predictor System Using Convolutional Neural Networks," 2019 International Conference on Mechatronics, Electronics and Automotive Engineering (ICMEAE), Cuernavaca, Mexico, 2019, pp. 28-33, doi: 10.1109/ICMEAE.2019.00013. keywords: {Videos;Convolutional neural networks;Biological neural networks;Training;Databases;Software;Face recognition;Facial Expression;Convolutional Networks;Computer Vision;Machine Learning;Expression Specific Features},
-
-
-                DOI: <a href="https://doi.org/10.1109/ICMEAE.2019.00013">https://doi.org/10.1109/ICMEAE.2019.00013</a></li>
+                <li>A. Salinas-Medina and A. Neme, "Enhancing Hospital Efficiency Through Web-Deployed Object Detection: A YOLOv8-Based Approach for Automating Healthcare Operations," 2023 Mexican International Conference on Computer Science (ENC), Guanajuato, Guanajuato, Mexico, 2023, pp. 1-6, doi: 10.1109/ENC60556.2023.10508642. DOI: <a href="https://doi.org/10.1109/ENC60556.2023.10508642">https://doi.org/10.1109/ENC60556.2023.10508642</a></li>
+                <li>S. -M. Alejandro and N. -C. J. Antonio, "A real-time deep learning system for the translation of Mexican signal language into text," 2021 Mexican International Conference on Computer Science (ENC), Morelia, Mexico, 2021, pp. 1-7, doi: 10.1109/ENC53357.2021.9534825. DOI: <a href="https://doi.org/10.1109/ENC53357.2021.9534825">https://doi.org/10.1109/ENC53357.2021.9534825</a></li>
+                <li>A. Salinas-Medina, H. Poblano-Rosas, M. R. Bustamante-Bello, et al., "A Live Emotions Predictor System Using Convolutional Neural Networks," 2019 International Conference on Mechatronics, Electronics and Automotive Engineering (ICMEAE), Cuernavaca, Mexico, 2019, pp. 28-33, doi: 10.1109/ICMEAE.2019.00013. DOI: <a href="https://doi.org/10.1109/ICMEAE.2019.00013">https://doi.org/10.1109/ICMEAE.2019.00013</a></li>
             </ul>
         </div>
     </section>
-    
 
     <footer>
-        <p>Connect with me: ORCID, Google Scholar, SCOPUS, Applied Math and Computer Science Lab</p>
+        <p>Connect with me: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a>, <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a>, <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a></p>
     </footer>
 </body>
 </html>
