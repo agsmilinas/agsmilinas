@@ -13,6 +13,58 @@ body {
     position: relative;
     display: flex;
     min-height: 100vh;
+    overflow: hidden;
+}
+
+/* === DYNAMIC BACKGROUND LAYERS === */
+#gradient, .stars, .twinkling, .clouds {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+#gradient {
+    background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000000);
+    background-size: 400% 400%;
+    animation: gradientMove 30s ease infinite;
+    z-index: -4;
+}
+
+.stars {
+    background: url('https://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+    z-index: -3;
+}
+
+.twinkling {
+    background: url('https://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
+    animation: moveTwinkling 200s linear infinite;
+    z-index: -2;
+}
+
+.clouds {
+    background: url('https://www.transparenttextures.com/patterns/clouds.png') repeat-x;
+    animation: moveClouds 100s linear infinite;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes moveTwinkling {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
+@keyframes moveClouds {
+    0% { background-position: 0 0; }
+    100% { background-position: 10000px 0; }
 }
 
 /* === SIDEBAR === */
@@ -148,42 +200,6 @@ footer a:hover {
     color: #fff;
 }
 
-/* === BACKGROUND EFFECTS === */
-#gradient, .stars, .twinkling, .clouds {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.stars {
-    background: #000 url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
-    z-index: 0;
-}
-
-.twinkling {
-    background: transparent url('http://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
-    z-index: 1;
-    animation: move-twink-back 200s linear infinite;
-}
-
-.clouds {
-    background: transparent url('cloud1.png,cloud2.png,cloud3.png') top no-repeat center;
-    z-index: 3;
-    animation: move-clouds-back 200s linear infinite;
-}
-
-@keyframes move-twink-back {
-    from { background-position: 0 0; }
-    to { background-position: -10000px 5000px; }
-}
-
-@keyframes move-clouds-back {
-    from { background-position: 0 0; }
-    to { background-position: 10000px 0; }
-}
-
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
     nav {
@@ -210,4 +226,26 @@ footer a:hover {
         margin-left: 0;
         padding: 20px;
     }
+}
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    pointer-events: none; /* IMPORTANT */
+}
+
+html, body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#particles-js canvas {
+    filter: drop-shadow(0 0 6px #ffffff);
+}
+#particles-js {
+    background: linear-gradient(160deg, #0b0c10, #1f2833, #0b0c10);
 }
