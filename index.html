@@ -11,6 +11,7 @@
 </head>
 <body>
     <div id="particles-js"></div>
+    <div id="galaxy-clusters"></div>
 
     <!-- <div class="stars"></div> -->
 <!-- <div class="twinkling"></div> -->
@@ -115,35 +116,35 @@
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 160,
+      "value": 80,  // Fewer but larger = more visible
       "density": {
         "enable": true,
-        "value_area": 1000
+        "value_area": 800
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": ["#ffffff", "#00ccff", "#99ccff", "#66ffff"]  // Slight color variety
     },
     "shape": {
       "type": "circle"
     },
     "opacity": {
-      "value": 0.6,
+      "value": 0.9,
       "random": true,
       "anim": {
         "enable": true,
-        "speed": 1,
-        "opacity_min": 0.1,
+        "speed": 0.8,
+        "opacity_min": 0.4,
         "sync": false
       }
     },
     "size": {
-      "value": 2,
+      "value": 6,  // Bigger particles
       "random": true,
       "anim": {
         "enable": true,
-        "speed": 3,
-        "size_min": 0.3,
+        "speed": 4,
+        "size_min": 1,
         "sync": false
       }
     },
@@ -175,10 +176,10 @@ particlesJS("particles-js", {
     },
     "modes": {
       "repulse": {
-        "distance": 100
+        "distance": 120
       },
       "push": {
-        "particles_nb": 4
+        "particles_nb": 3
       }
     }
   },
@@ -186,6 +187,61 @@ particlesJS("particles-js", {
 });
 
         </script>
+        <script>
+            particlesJS("galaxy-clusters", {
+              "particles": {
+                "number": {
+                  "value": 20,
+                  "density": { "enable": true, "value_area": 1200 }
+                },
+                "color": {
+                  "value": ["#663399", "#aa00ff", "#ff66cc", "#9900cc"]
+                },
+                "shape": {
+                  "type": "circle"
+                },
+                "opacity": {
+                  "value": 0.2,
+                  "random": true,
+                  "anim": {
+                    "enable": true,
+                    "speed": 0.5,
+                    "opacity_min": 0.05,
+                    "sync": false
+                  }
+                },
+                "size": {
+                  "value": 80,
+                  "random": true,
+                  "anim": {
+                    "enable": true,
+                    "speed": 1.5,
+                    "size_min": 40,
+                    "sync": false
+                  }
+                },
+                "line_linked": {
+                  "enable": false
+                },
+                "move": {
+                  "enable": true,
+                  "speed": 0.15,
+                  "direction": "none",
+                  "random": true,
+                  "straight": false,
+                  "out_mode": "out"
+                }
+              },
+              "interactivity": {
+                "events": {
+                  "onhover": { "enable": false },
+                  "onclick": { "enable": false }
+                }
+              },
+              "retina_detect": true
+            });
+            </script>
+            
         
 </body>
 </html>
