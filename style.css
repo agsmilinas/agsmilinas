@@ -1,0 +1,213 @@
+/* === RESET === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* === SIDEBAR === */
+nav {
+    background-color: #1e1e1e;
+    width: 240px;
+    min-height: 100vh;
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+nav h3 {
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+/* === MAIN CONTENT === */
+main {
+    margin-left: 240px;
+    padding: 40px;
+    flex: 1;
+    z-index: 5;
+}
+
+/* === HEADER === */
+header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+/* === POSTS === */
+.posts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.posts ul li {
+    background-color: rgba(255,255,255,0.05);
+    border-left: 5px solid #4CAF50;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.posts p {
+    color: #ccc;
+    margin-top: 10px;
+}
+
+.posts a {
+    color: #00d9ff;
+    text-decoration: underline;
+}
+
+.posts a:hover {
+    color: #ffffff;
+}
+
+/* === CONTACT === */
+.contact-info {
+    background: #4CAF50;
+    color: #fff;
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-info a:hover {
+    color: #eee;
+}
+
+/* === FOOTER === */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* === BACKGROUND EFFECTS === */
+#gradient, .stars, .twinkling, .clouds {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.stars {
+    background: #000 url('http://www.script-tutorials.com/demos/360/images/stars.png') repeat top center;
+    z-index: 0;
+}
+
+.twinkling {
+    background: transparent url('http://www.script-tutorials.com/demos/360/images/twinkling.png') repeat top center;
+    z-index: 1;
+    animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+    background: transparent url('cloud1.png,cloud2.png,cloud3.png') top no-repeat center;
+    z-index: 3;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
+@keyframes move-clouds-back {
+    from { background-position: 0 0; }
+    to { background-position: 10000px 0; }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        position: static;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    nav img {
+        margin-bottom: 0;
+        width: 70px;
+        height: 70px;
+    }
+
+    nav h3 {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
