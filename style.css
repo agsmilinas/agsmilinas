@@ -107,29 +107,36 @@ main{ margin-left:260px; padding:40px; flex:1; z-index:5 }
 /* === SECTIONS === */
 h2{ font-weight:800; letter-spacing:.2px; margin:8px 0 10px }
 #home{ margin-bottom:8px }
-#home p{ color:var(--muted); margin:.4rem 0 }
+#home p{ color:var(--muted); margin:.4rem 0; max-width:72ch }
 
 /* === POSTS (cards grid) === */
 .posts h2{ margin-top:8px }
 .posts-grid{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1rem;
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:1rem;
+  max-width:1200px;     /* keeps it to ~3 columns on wide screens */
+  align-items:start;    /* cards size to their own height (masonry-ish) */
 }
-.posts ul{ list-style:none; padding:0; margin:0 }
-.posts ul li{
+
+/* Card styling lives on the grid item (ul) so entries without <li> still render as cards */
+.posts-grid > ul{
+  list-style:none; margin:0; padding:18px;
   background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
   border-left:5px solid var(--accent);
   border-right:1px solid var(--stroke);
   border-top:1px solid var(--stroke);
   border-bottom:1px solid var(--stroke);
-  padding:18px; border-radius:16px; margin:0;
-  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  border-radius:16px;
   backdrop-filter:saturate(120%) blur(4px);
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
-.posts ul li:hover{
+.posts-grid > ul:hover{
   transform:translateY(-3px);
   box-shadow:0 16px 34px rgba(0,0,0,.35);
   border-color:rgba(139,92,246,.45);
 }
+.posts ul li{ list-style:none }
 .posts p{ color:var(--muted); margin-top:.4rem }
 .posts a{ color:var(--accent2); text-decoration:underline }
 .posts a:hover{ color:#ffffff }
