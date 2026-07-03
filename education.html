@@ -1,178 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Education and Certifications - Alejandro Salinas, Ph.D. Candidate</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #fff; /* White font */
-            background-color: #000; /* Background color */
-            position: relative;
-            z-index: 5;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-            z-index: 5; /* Front */
-            font-size: 2em; /* Increased font size */
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 15px;
-            position: relative;
-            z-index: 5;
-        }
-
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            transition: color 0.3s;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        nav a:hover {
-            color: #4CAF50;
-        }
-
-        section {
-            padding: 30px;
-            max-width: 1200px;
-            margin: 30px auto;
-            position: relative;
-            z-index: 5;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .quote {
-            font-style: italic;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .education ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .education ul li {
-            margin: 20px 0;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            position: relative;
-            z-index: 5;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #4CAF50;
-            text-decoration: underline;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav a {
-                margin: 10px 0;
-            }
-
-            section {
-                padding: 20px;
-                margin: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px 0;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education — Alejandro Salinas-Medina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Education and Certifications</h1>
-    </header>
+  <div id="particles-js"></div>
+  <div id="galaxy-clusters"></div>
 
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./education.html">Education/Certifications</a>
-        <a href="./experience.html">Experience</a>
-        <a href="./publications.html">Publications</a>
-        <a href="./courses.html">Courses</a>
-        <a href="./software.html">Software</a>
-        <a href="./index.html">Posts/News</a>
+  <div class="mobile-bar">
+    <button class="hamburger" id="navToggle" aria-label="Open navigation" aria-expanded="false"><i class="bi bi-list"></i></button>
+    <div class="mobile-bar__brand">Alejandro Salinas-Medina<span>PhD · McGill · Mila</span></div>
+  </div>
+  <div class="nav-scrim"></div>
+
+  <div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__avatar"><img src="./photo.jpeg" alt="Alejandro Salinas-Medina" /></div>
+    <div class="sidebar__name">Alejandro<br>Salinas-Medina</div>
+    <div class="sidebar__role">PhD · McGill · Mila · The&nbsp;Neuro</div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="./index.html"><span class="idx">00</span>Home</a><a href="./education.html" aria-current="page"><span class="idx">01</span>Education</a><a href="./experience.html"><span class="idx">02</span>Experience</a><a href="./publications.html"><span class="idx">03</span>Publications</a><a href="./courses.html"><span class="idx">04</span>Courses</a><a href="./software.html"><span class="idx">05</span>Software</a><a href="./index.html#posts"><span class="idx">06</span>News</a>
     </nav>
+    <div class="sidebar__foot">
+      <div class="social"><a href="https://orcid.org/0009-0009-9548-9315" title="ORCID" target="_blank" rel="noopener"><i class="bi bi-fingerprint"></i></a><a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" title="Google Scholar" target="_blank" rel="noopener"><i class="bi bi-mortarboard"></i></a><a href="https://www.linkedin.com/in/alejandro-salinas-medina/" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a><a href="mailto:alejandro.salinas@mail.mcgill.ca" title="Email"><i class="bi bi-envelope"></i></a></div>
+      <button id="themeToggle" class="btn-theme" title="Toggle theme"><i class="bi bi-moon-stars"></i></button>
+    </div>
+  </aside>
+    <main class="main">
+      <header class="hero reveal">
+        <div class="hero__eyebrow">Academic record</div>
+        <h1><span class="gradient-text">Education &amp; certifications</span></h1>
+        <p class="hero__sub">From mechatronics and robotics to computer science and neuro-AI.</p>
+      </header>
 
-    <section class="education">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>B.Sc. Mechatronics Engineering/Applied Robotics</strong> | Instituto Tecnológico y de Estudios Superiores de Monterrey | 2014–2018 | Partially funded by ITESM.</li>
-            <li><strong>M.Sc. in Computer Science and Engineering</strong> | Universidad Nacional Autónoma de México | 2019–2021 | Thesis on "Real-Time Sign Language Translator System Using Deep Convolutional Networks." Fully funded program.</li>
-            <li><strong>Ph.D. in Computer Science</strong> | McGill University | 2023–Present | Fully funded program.</li>
-        </ul>
+      <section class="section">
+        <div class="eyebrow reveal">§ Degrees</div>
+        <h2 class="reveal">Education</h2>
+        <div class="timeline"><div class="tl-item reveal"><div class="tl-date">2023 – Present</div><div class="tl-title">Ph.D. in Computer Science</div><div class="tl-org">McGill University</div><div class="tl-note">Fully funded program.</div></div><div class="tl-item reveal"><div class="tl-date">2019 – 2021</div><div class="tl-title">M.Sc. in Computer Science &amp; Engineering</div><div class="tl-org">Universidad Nacional Autónoma de México</div><div class="tl-note">Thesis: “Real-Time Sign Language Translator System Using Deep Convolutional Networks.” Fully funded.</div></div><div class="tl-item reveal"><div class="tl-date">2014 – 2018</div><div class="tl-title">B.Sc. Mechatronics Engineering / Applied Robotics</div><div class="tl-org">Tecnológico de Monterrey (ITESM)</div><div class="tl-note">Partially funded by ITESM.</div></div></div>
+      </section>
 
-        <h2>Certifications</h2>
-        <ul>
-            <li>Google Cloud Certified Professional Machine Learning Engineer</li>
-            <li>Certified Data Scientist (Johns Hopkins University)</li>
-            <li>Certified Full Stack Developer (IBM / Simplilearn)</li>
-            <li>Deep Learning Specialization, Mathematics for Machine Learning and Data Science Specialization (DeepLearning.AI)</li>
-        </ul>
-    </section>
+      <section class="section">
+        <div class="eyebrow reveal">§ Credentials</div>
+        <h2 class="reveal">Certifications</h2>
+        <div class="card-grid"><article class="card reveal" data-delay="0"><div class="card__title">Google Cloud Certified Professional Machine Learning Engineer</div></article><article class="card reveal" data-delay="60"><div class="card__title">Certified Data Scientist — Johns Hopkins University</div></article><article class="card reveal" data-delay="120"><div class="card__title">Certified Full Stack Developer — IBM / Simplilearn</div></article><article class="card reveal" data-delay="0"><div class="card__title">Deep Learning Specialization &amp; Mathematics for ML and Data Science — DeepLearning.AI</div></article></div>
+      </section>
 
-    <footer>
-        <p>Connect with me: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a>, <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a>, <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a>, CPS Lab</p>
-    </footer>
+      <footer class="site-footer reveal">
+        <p>Connect: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a> ·
+           <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a> ·
+           <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a></p>
+        <p class="mono">© <span id="yr"></span> Alejandro Salinas-Medina — mapping the cosmos of the brain.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

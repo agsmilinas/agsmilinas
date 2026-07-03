@@ -1,180 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Experience - Alejandro Salinas, Ph.D. Candidate</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #fff; /* White font */
-            background-color: #000; /* Background color */
-            position: relative;
-            z-index: 5;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-            z-index: 5; /* Front */
-            font-size: 2em; /* Increased font size */
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 15px;
-            position: relative;
-            z-index: 5;
-        }
-
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            transition: color 0.3s;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        nav a:hover {
-            color: #4CAF50;
-        }
-
-        section {
-            padding: 30px;
-            max-width: 1200px;
-            margin: 30px auto;
-            position: relative;
-            z-index: 5;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .quote {
-            font-style: italic;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .experience ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .experience ul li {
-            margin: 20px 0;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            position: relative;
-            z-index: 5;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #4CAF50;
-            text-decoration: underline;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav a {
-                margin: 10px 0;
-            }
-
-            section {
-                padding: 20px;
-                margin: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px 0;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience — Alejandro Salinas-Medina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Experience</h1>
-    </header>
+  <div id="particles-js"></div>
+  <div id="galaxy-clusters"></div>
 
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./education.html">Education/Certifications</a>
-        <a href="./experience.html">Experience</a>
-        <a href="./publications.html">Publications</a>
-        <a href="./courses.html">Courses</a>
-        <a href="./software.html">Software</a>
-        <a href="./index.html">Posts/News</a>
+  <div class="mobile-bar">
+    <button class="hamburger" id="navToggle" aria-label="Open navigation" aria-expanded="false"><i class="bi bi-list"></i></button>
+    <div class="mobile-bar__brand">Alejandro Salinas-Medina<span>PhD · McGill · Mila</span></div>
+  </div>
+  <div class="nav-scrim"></div>
+
+  <div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__avatar"><img src="./photo.jpeg" alt="Alejandro Salinas-Medina" /></div>
+    <div class="sidebar__name">Alejandro<br>Salinas-Medina</div>
+    <div class="sidebar__role">PhD · McGill · Mila · The&nbsp;Neuro</div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="./index.html"><span class="idx">00</span>Home</a><a href="./education.html"><span class="idx">01</span>Education</a><a href="./experience.html" aria-current="page"><span class="idx">02</span>Experience</a><a href="./publications.html"><span class="idx">03</span>Publications</a><a href="./courses.html"><span class="idx">04</span>Courses</a><a href="./software.html"><span class="idx">05</span>Software</a><a href="./index.html#posts"><span class="idx">06</span>News</a>
     </nav>
+    <div class="sidebar__foot">
+      <div class="social"><a href="https://orcid.org/0009-0009-9548-9315" title="ORCID" target="_blank" rel="noopener"><i class="bi bi-fingerprint"></i></a><a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" title="Google Scholar" target="_blank" rel="noopener"><i class="bi bi-mortarboard"></i></a><a href="https://www.linkedin.com/in/alejandro-salinas-medina/" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a><a href="mailto:alejandro.salinas@mail.mcgill.ca" title="Email"><i class="bi bi-envelope"></i></a></div>
+      <button id="themeToggle" class="btn-theme" title="Toggle theme"><i class="bi bi-moon-stars"></i></button>
+    </div>
+  </aside>
+    <main class="main">
+      <header class="hero reveal">
+        <div class="hero__eyebrow">A decade across research &amp; industry</div>
+        <h1><span class="gradient-text">Experience</span></h1>
+        <p class="hero__sub">Deploying scalable AI systems and leading cross-functional teams — from cloud infrastructure to biologically realistic brain simulation.</p>
+      </header>
 
-    <section class="experience">
-        <h2>Professional Experience</h2>
-        <ul>            
-            <li><strong>Lead Data Scientist</strong> | Distillery Consultancy | Jan 2023 - Jan 2025</li>
-            <li><strong>Big Data AI ML Cloud Technical Solutions Engineer</strong> | Google | Aug 2022 - Jan 2023</li>
-            <li><strong>Senior Data Scientist</strong> | Coca-Cola | Sep 2021 - Aug 2022</li>
-            <li><strong>Machine Learning Engineer</strong> | Lumiata | Aug 2020 - Sep 2021</li>
-            <li><strong>Full Stack Developer/Machine Learning Engineer</strong> | IBM | Mar 2018 – Jul 2020</li>
-            <li><strong>Process Engineer</strong> | P&G | May 2016 – Feb 2018</li>
-        </ul>
+      <section class="section">
+        <div class="eyebrow reveal">§ Industry</div>
+        <h2 class="reveal">Professional experience</h2>
+        <div class="timeline"><div class="tl-item reveal"><div class="tl-date">Jan 2023 – Jan 2025</div><div class="tl-title">Lead Data Scientist</div><div class="tl-org">Distillery Consultancy</div></div><div class="tl-item reveal"><div class="tl-date">Aug 2022 – Jan 2023</div><div class="tl-title">Big Data / AI / ML Cloud Technical Solutions Engineer</div><div class="tl-org">Google</div></div><div class="tl-item reveal"><div class="tl-date">Sep 2021 – Aug 2022</div><div class="tl-title">Senior Data Scientist</div><div class="tl-org">Coca-Cola</div></div><div class="tl-item reveal"><div class="tl-date">Aug 2020 – Sep 2021</div><div class="tl-title">Machine Learning Engineer</div><div class="tl-org">Lumiata</div></div><div class="tl-item reveal"><div class="tl-date">Mar 2018 – Jul 2020</div><div class="tl-title">Full Stack Developer / Machine Learning Engineer</div><div class="tl-org">IBM</div></div><div class="tl-item reveal"><div class="tl-date">May 2016 – Feb 2018</div><div class="tl-title">Process Engineer</div><div class="tl-org">Procter &amp; Gamble</div></div></div>
+      </section>
 
-        <h2>Academic Experience</h2>
-        <ul>
-            <li><strong>MILA (Quebec AI Institute)</strong> | AI Research Student | Feb 2023 - Present</li>
-            <li><strong>U.N.A.M. Complexity Sciences Center (C3)</strong> | Software Developer Lead/Senior Data Scientist | Jan 2020 – Dec 2023</li>
-            <li><strong>Universidad Iberoamericana</strong> | Guest Chair Professor for Big Data & Data Analytics | Jan 2020 – Jun 2020</li>
-        </ul>
-    </section>
+      <section class="section">
+        <div class="eyebrow reveal">§ Academia</div>
+        <h2 class="reveal">Academic experience</h2>
+        <div class="timeline"><div class="tl-item reveal"><div class="tl-date">Feb 2023 – Present</div><div class="tl-title">AI Research Student</div><div class="tl-org">MILA — Quebec AI Institute</div></div><div class="tl-item reveal"><div class="tl-date">Jan 2020 – Dec 2023</div><div class="tl-title">Software Developer Lead / Senior Data Scientist</div><div class="tl-org">UNAM — Complexity Sciences Center (C3)</div></div><div class="tl-item reveal"><div class="tl-date">Jan 2020 – Jun 2020</div><div class="tl-title">Guest Chair Professor, Big Data &amp; Data Analytics</div><div class="tl-org">Universidad Iberoamericana</div></div></div>
+      </section>
 
-    <footer>
-        <p>Connect with me: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a>, <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a>, <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a>, CPS Lab</p>
-    </footer>
+      <footer class="site-footer reveal">
+        <p>Connect: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a> ·
+           <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a> ·
+           <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a></p>
+        <p class="mono">© <span id="yr"></span> Alejandro Salinas-Medina — mapping the cosmos of the brain.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

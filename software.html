@@ -1,241 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Education and Certifications - Alejandro Salinas, Ph.D. Candidate</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #fff; /* White font */
-            background-color: #000; /* Background color */
-            position: relative;
-            z-index: 5;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-            z-index: 5; /* Front */
-            font-size: 2em; /* Increased font size */
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 15px;
-            position: relative;
-            z-index: 5;
-        }
-
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            transition: color 0.3s;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        nav a:hover {
-            color: #4CAF50;
-        }
-
-        section {
-            padding: 30px;
-            max-width: 1200px;
-            margin: 30px auto;
-            position: relative;
-            z-index: 5;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            position: relative;
-            z-index: 5;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #4CAF50;
-            text-decoration: underline;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav a {
-                margin: 10px 0;
-            }
-
-            section {
-                padding: 20px;
-                margin: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px 0;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Software — Alejandro Salinas-Medina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Education and Certifications</h1>
-    </header>
+  <div id="particles-js"></div>
+  <div id="galaxy-clusters"></div>
 
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./education.html">Education/Certifications</a>
-        <a href="./experience.html">Experience</a>
-        <a href="./publications.html">Publications</a>
-        <a href="./courses.html">Courses</a>
-        <a href="./software.html">Software</a>
-        <a href="./index.html">Posts/News</a>
+  <div class="mobile-bar">
+    <button class="hamburger" id="navToggle" aria-label="Open navigation" aria-expanded="false"><i class="bi bi-list"></i></button>
+    <div class="mobile-bar__brand">Alejandro Salinas-Medina<span>PhD · McGill · Mila</span></div>
+  </div>
+  <div class="nav-scrim"></div>
+
+  <div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__avatar"><img src="./photo.jpeg" alt="Alejandro Salinas-Medina" /></div>
+    <div class="sidebar__name">Alejandro<br>Salinas-Medina</div>
+    <div class="sidebar__role">PhD · McGill · Mila · The&nbsp;Neuro</div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="./index.html"><span class="idx">00</span>Home</a><a href="./education.html"><span class="idx">01</span>Education</a><a href="./experience.html"><span class="idx">02</span>Experience</a><a href="./publications.html"><span class="idx">03</span>Publications</a><a href="./courses.html"><span class="idx">04</span>Courses</a><a href="./software.html" aria-current="page"><span class="idx">05</span>Software</a><a href="./index.html#posts"><span class="idx">06</span>News</a>
     </nav>
+    <div class="sidebar__foot">
+      <div class="social"><a href="https://orcid.org/0009-0009-9548-9315" title="ORCID" target="_blank" rel="noopener"><i class="bi bi-fingerprint"></i></a><a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" title="Google Scholar" target="_blank" rel="noopener"><i class="bi bi-mortarboard"></i></a><a href="https://www.linkedin.com/in/alejandro-salinas-medina/" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a><a href="mailto:alejandro.salinas@mail.mcgill.ca" title="Email"><i class="bi bi-envelope"></i></a></div>
+      <button id="themeToggle" class="btn-theme" title="Toggle theme"><i class="bi bi-moon-stars"></i></button>
+    </div>
+  </aside>
+    <main class="main">
+      <header class="hero reveal">
+        <div class="hero__eyebrow">Projects &amp; demos</div>
+        <h1><span class="gradient-text">Software</span></h1>
+        <p class="hero__sub">Systems I've built — from sign-language translation to hospital object detection and epidemiological intelligence platforms.</p>
+      </header>
 
-    <section>
+      <article class="media reveal">
         <h2>Real-Time Deep Learning System for Sign Language Translation</h2>
-        
-        <!-- Embed the YouTube video -->
-        <iframe width="800" height="800" src="https://www.youtube.com/embed/Guy0dCM3v_w" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
+        <div class="frame"><iframe src="https://www.youtube.com/embed/Guy0dCM3v_w" title="Sign language translation demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <h3>Abstract</h3>
+        <p>Communication is one of the most important rights of a healthy individual. Hearing-impaired citizens face major challenges: there is no single universal sign language, and only a small share of the population understands any given one. This system translates the Mexican Sign Language into text using convolutional neural networks. Signs are captured across hundreds of images, and the system translates them through several convolutional stages and transfer learning at 91% accuracy.</p>
+        <h3>Citation</h3>
+        <p>S.-M. Alejandro and N.-C. J. Antonio, “A real-time deep learning system for the translation of Mexican sign language into text,” 2021 Mexican International Conference on Computer Science (ENC), Morelia, Mexico, 2021, pp. 1–7, doi: 10.1109/ENC53357.2021.9534825.</p>
+        <p><strong>Keywords:</strong> Transfer learning, gesture recognition, assistive technologies, feature extraction, sign-language interpretation, convolutional neural networks, deep learning, single-page application, Flask.</p>
+      </article>
 
-        <!-- Abstract Section -->
-        <h3>Abstract:</h3>
-        <p>
-            The ability to communicate is one of the most important rights of a healthy individual. Hearing-impaired citizens face several challenges: There is not a common sign language and the percentage of the population that understands a given sign language is negligible. The benefits of a system capable of translating from a sign language, in particular, the Mexican Sign language, to text, is outstanding. In this contribution, we describe such system. It is based on convolutional neural networks, which are particularly useful tool to extract relevant features from images. The sign language is captured in hundreds of images, and the system is able to translate them to text via several convolutional stages and transfer learning with 91% accuracy. We report the architecture and performance of the system.
-        </p>
+      <article class="media reveal">
+        <h2>Web-Deployed Object Detection for Hospital Efficiency — YOLOv8</h2>
+        <div class="frame"><video src="./result_ambulance.mp4" controls playsinline></video></div>
+        <h3>Abstract</h3>
+        <p>Hospital operational efficiency directly shapes patient outcomes, yet traditional, manually-managed systems are prone to error. This project trains a YOLOv8 model to detect classes relevant to hospital operations — ambulances, beds, wheelchairs, stethoscopes, medical equipment, stretchers, band-aids, and towels — deployed to the web via React.js and TensorFlow.js so it runs across computers, smartphones, and tablets. Integrated with hospital management systems, it improves resource tracking and lets staff focus more on patient care. Published in the <a href="https://ieeexplore.ieee.org/xpl/conhome/10508598/proceeding" target="_blank" rel="noopener">2023 Mexican International Conference on Computer Science (ENC)</a>.</p>
+        <h3>Citation</h3>
+        <p>A. Salinas-Medina and A. Neme, “Enhancing Hospital Efficiency Through Web-Deployed Object Detection: A YOLOv8-Based Approach for Automating Healthcare Operations,” 2023 Mexican International Conference on Computer Science (ENC), Guanajuato, Mexico, 2023, pp. 1–6, doi: 10.1109/ENC60556.2023.10508642.</p>
+        <p><strong>Keywords:</strong> YOLOv8, web applications, deep learning, detection and recognition, hospital operation efficiency, healthcare, hospital management systems.</p>
+      </article>
 
-        <!-- Citation Section -->
-        <h3>Citation:</h3>
-        <p>
-            S. -M. Alejandro and N. -C. J. Antonio, "A real-time deep learning system for the translation of mexican signal language into text," 2021 Mexican International Conference on Computer Science (ENC), Morelia, Mexico, 2021, pp. 1-7, doi: 10.1109/ENC53357.2021.9534825.
-        </p>
+      <article class="media reveal">
+        <h2>UI/UX Design Leadership — Proyecto 42 &amp; Epipuma</h2>
+        <h3>Proyecto 42 — Deep Data for Obesity &amp; Metabolic Disease</h3>
+        <p>As UI/UX lead, I helped design and build <a href="https://project42.c3.unam.mx/" target="_blank" rel="noopener">Proyecto 42</a>, an interdisciplinary platform assembling one of the most comprehensive datasets for the study of obesity and metabolic disease — over 7,000 participants and thousands of variables spanning genetics, physiology, psychology, sociology, economics, and public policy. A machine-learning modeling layer lets researchers explore this deep dataset for holistic, scalable insight.</p>
+        <h3>Epipuma — Epidemiological Intelligence for SARS-CoV-2</h3>
+        <img src="./epipuma.png" alt="Epipuma platform screenshot" />
+        <p>I also led UI/UX for <a href="https://epipuma20.c3.unam.mx/" target="_blank" rel="noopener">Epipuma</a>, a real-time platform for tracking and projecting COVID-19 dynamics across Mexico. It supported national, regional, and hospital-level decisions by visualizing infection trends, capacity forecasts, and mortality predictions — pairing Bayesian ML models with interfaces tailored for clinicians and policymakers, so predictive models could be generated without ML expertise.</p>
+        <h3>Citation</h3>
+        <p>Salinas Medina, A., García Peña, G. E., Gordillo, J. L., Calero, R., Romero Martínez, P., Jurado Jiménez, K., González-Salazar, C., &amp; Stephens, C. R. (2023). <em>EpI-PUMA: Plataforma Universitaria de Inteligencia Epidemiológica de SARS-CoV-2, Versión 1.0.</em> Revista TIES, Número 7.</p>
+      </article>
 
-        <!-- Keywords Section -->
-        <p><strong>Keywords:</strong> Transfer learning, Sociology, Gesture recognition, Assistive technologies, Tools, Feature extraction, Data models, Sign language interpretation, Machine learning, Convolutional neural networks, Deep Learning, Transfer learning, Singular Page Application, Flask</p>
-    </section>
+      <footer class="site-footer reveal">
+        <p>Connect: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a> ·
+           <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a> ·
+           <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a></p>
+        <p class="mono">© <span id="yr"></span> Alejandro Salinas-Medina — mapping the cosmos of the brain.</p>
+      </footer>
+    </main>
+  </div>
 
-    <section>
-        <h2>Enhancing Hospital Efficiency Through Web-Deployed Object Detection: A YOLOv8-Based Approach for Automating Healthcare Operations</h2>
-        
-        <!-- Embed the YouTube video -->
-        <iframe width="800" height="800" src="./result_ambulance.mp4" 
-            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-
-        <!-- Abstract Section -->
-        <h3>Abstract:</h3>
-        <p>
-            Hospital operation efficiency plays a crucial role in health- care delivery and patient outcomes. Traditional hospital sys- tems, often managed manually, are subject to human error and inefficiencies. There is a pressing need to automate certain tasks to improve speed, accuracy, and resource utilization. This research paper presents an innovative approach towards hospital automation using a You Only Look Once version 8 (YOLOv8) deep learning model. We propose training the YOLOv8 model to detect and recognize several classes per- tinent to hospital operations including Ambulances, Beds, Wheelchairs, Stetho-scopes, Medical equipment, Stretchers, Band-aids, and Towels. This model is planned to be deployed in web applications using React.js and TensorFlow.js, enabling its use on various platforms including computers, smartphones, and tablets. By integrating this technology with hospital management systems, we aim to assist hospital personnel in their tasks and improve operational efficiency. This could potentially increase the precision and speed of routine tasks, improve resource tracking, and enable healthcare workers to concentrate more on patient care
-            Published in: <a href="https://ieeexplore.ieee.org/xpl/conhome/10508598/proceeding">2023 Mexican International Conference on Computer Science (ENC)  </a>      </p>
-
-        <!-- Citation Section -->
-        <h3>Citation:</h3>
-        <p>
-            A. Salinas-Medina and A. Neme, "Enhancing Hospital Efficiency Through Web-Deployed Object Detection: A YOLOv8-Based Approach for Automating Healthcare Operations," 2023 Mexican International Conference on Computer Science (ENC), Guanajuato, Guanajuato, Mexico, 2023, pp. 1-6, doi: 10.1109/ENC60556.2023.10508642. keywords: {YOLO;Training;Hospitals;Computational modeling;Wheelchairs;Pressing;Resource management;YOLOv8 model;Web applications;Deep learning model;Detection and recognition;Hospital operation efficiency;Healthcare sector;Hospital management systems;Computers;Smartphones},
-
-        </p>
-
-        <!-- Keywords Section -->
-        <p><strong>Keywords:</strong>     YOLOv8 model
-            ,
-            Web applications
-            ,
-            Deep learning model
-            ,
-            Detection and recognition
-            ,
-            Hospital operation efficiency
-            ,
-            Healthcare sector
-            ,
-            Hospital management systems
-            ,
-            Computers
-            ,
-            Smartphones
-        </p>
-    </section>
-
-    <section>
-    <h2>UI/UX Design Leadership – Proyecto 42 and Epipuma Platforms</h2>
-
-    <h3>Proyecto 42 – Deep Data for Obesity and Metabolic Disease</h3>
-    <p>
-        As UI/UX lead, I contributed to the design and development of <a href="https://project42.c3.unam.mx/" target="_blank">Proyecto 42</a>, an interdisciplinary platform aimed at developing the most comprehensive dataset for the study of obesity and metabolic disease. The project integrates over 7,000 participants and thousands of variables across genetics, physiology, psychology, sociology, economics, and public policy.
-    </p>
-    <p>
-        Proyecto 42 enables researchers to access and analyze this "deep" dataset through a machine learning-based modeling platform, facilitating holistic and scalable insights into the complexity of metabolic diseases.
-    </p>
-    <br>
-    <h3>Epipuma – Epidemiological Intelligence Platform for SARS-CoV-2</h3>
-    <img src="./epipuma.png" alt="Epipuma Platform Screenshot" width="100%" style="margin: 20px 0;">
-    <p>
-        I also led the UI/UX development for <a href="https://epipuma20.c3.unam.mx/" target="_blank">Epipuma</a>, a real-time platform for tracking and projecting COVID-19 dynamics across Mexico. The platform was developed to support national, regional, and hospital-level decision-making by visualizing infection trends, hospital capacity forecasts, and mortality predictions.
-    </p>
-    <p>
-        Epipuma integrates Bayesian ML models with user-friendly interfaces tailored for different types of decision-makers — from clinicians to policymakers — offering predictive model generation without requiring ML expertise.
-    </p>
-            <h3>Citation:</h3>
-        <p>
-
-Salinas Medina, A., García Peña, G. E., Gordillo, J. L., Calero, R., Romero Martínez, P., Jurado Jiménez, K., González-Salazar, C., & Stephens, C. R. (2023). *EpI-PUMA: Plataforma Universitaria de Inteligencia Epidemiológica de SARS-CoV-2, Versión 1.0*. Revista de Tecnología e Innovación en Educación Superior (TIES), Número 7. [https://doi.org/10.22201/dgtic.26832968e.2023.7][https://www.ties.unam.mx/num07/6-epl-puma.html]
-
-
-        </p>
-</section>
-
-
-    <footer>
-        <p>Connect with me: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a>, <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a>, <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a>, CPS Lab</p>
-    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

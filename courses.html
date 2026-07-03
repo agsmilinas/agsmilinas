@@ -1,168 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Courses - Alejandro Salinas, Ph.D. Candidate</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #fff; /* White font */
-            background-color: #000; /* Background color */
-            position: relative;
-            z-index: 5;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-            z-index: 5; /* Front */
-            font-size: 2em; /* Increased font size */
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 15px;
-            position: relative;
-            z-index: 5;
-        }
-
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            transition: color 0.3s;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        nav a:hover {
-            color: #4CAF50;
-        }
-
-        section {
-            padding: 30px;
-            max-width: 1200px;
-            margin: 30px auto;
-            position: relative;
-            z-index: 5;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            position: relative;
-            z-index: 5;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #4CAF50;
-            text-decoration: underline;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav a {
-                margin: 10px 0;
-            }
-
-            section {
-                padding: 20px;
-                margin: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px 0;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Courses — Alejandro Salinas-Medina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Courses</h1>
-    </header>
+  <div id="particles-js"></div>
+  <div id="galaxy-clusters"></div>
 
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./education.html">Education/Certifications</a>
-        <a href="./experience.html">Experience</a>
-        <a href="./publications.html">Publications</a>
-        <a href="./courses.html">Courses</a>
-        <a href="./software.html">Software</a>
-        <a href="./index.html">Posts/News</a>
+  <div class="mobile-bar">
+    <button class="hamburger" id="navToggle" aria-label="Open navigation" aria-expanded="false"><i class="bi bi-list"></i></button>
+    <div class="mobile-bar__brand">Alejandro Salinas-Medina<span>PhD · McGill · Mila</span></div>
+  </div>
+  <div class="nav-scrim"></div>
+
+  <div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__avatar"><img src="./photo.jpeg" alt="Alejandro Salinas-Medina" /></div>
+    <div class="sidebar__name">Alejandro<br>Salinas-Medina</div>
+    <div class="sidebar__role">PhD · McGill · Mila · The&nbsp;Neuro</div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="./index.html"><span class="idx">00</span>Home</a><a href="./education.html"><span class="idx">01</span>Education</a><a href="./experience.html"><span class="idx">02</span>Experience</a><a href="./publications.html"><span class="idx">03</span>Publications</a><a href="./courses.html" aria-current="page"><span class="idx">04</span>Courses</a><a href="./software.html"><span class="idx">05</span>Software</a><a href="./index.html#posts"><span class="idx">06</span>News</a>
     </nav>
+    <div class="sidebar__foot">
+      <div class="social"><a href="https://orcid.org/0009-0009-9548-9315" title="ORCID" target="_blank" rel="noopener"><i class="bi bi-fingerprint"></i></a><a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" title="Google Scholar" target="_blank" rel="noopener"><i class="bi bi-mortarboard"></i></a><a href="https://www.linkedin.com/in/alejandro-salinas-medina/" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a><a href="mailto:alejandro.salinas@mail.mcgill.ca" title="Email"><i class="bi bi-envelope"></i></a></div>
+      <button id="themeToggle" class="btn-theme" title="Toggle theme"><i class="bi bi-moon-stars"></i></button>
+    </div>
+  </aside>
+    <main class="main">
+      <header class="hero reveal">
+        <div class="hero__eyebrow">Teaching</div>
+        <h1><span class="gradient-text">Courses</span></h1>
+        <p class="hero__sub">Sharing data science with the next generation of practitioners.</p>
+      </header>
 
-    <section>
-        <h2>Big Data and Analytics - Universidad Ibero</h2>
+      <article class="media reveal">
+        <h2>Big Data &amp; Analytics — Universidad Iberoamericana</h2>
+        <img src="./course.jpeg" alt="Teaching the inaugural Big Data and Analytics diploma at Universidad Iberoamericana" />
+        <p>I had the honor of becoming the first instructor of the inaugural Big Data and Data Analytics diploma program at Universidad Iberoamericana — an unforgettable experience that left me inspired, humbled, and grateful.</p>
+        <p>Sharing the knowledge I've gathered across my career with eager minds ready to embrace the world of data was deeply rewarding. Witnessing that spark of curiosity in every student reminded me of the profound impact education can have.</p>
+        <p>Big Data and Analytics aren't just technical skills; they are gateways to new perspectives — enabling data-driven decisions and transforming the world around us. Being part of a pioneering program laying the foundation for the next generation of data scientists is a dream come true.</p>
+        <p>I'm thankful for the chance to help shape the future of the data industry in Mexico, to advocate for the power of analytics, and to inspire students toward greatness in this fast-evolving field. This is only the beginning.</p>
+      </article>
 
-        <img src="./course.jpeg" alt="Alejandro Salinas-Medina" style="max-width: 100%; height: auto;">
+      <footer class="site-footer reveal">
+        <p>Connect: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a> ·
+           <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a> ·
+           <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a></p>
+        <p class="mono">© <span id="yr"></span> Alejandro Salinas-Medina — mapping the cosmos of the brain.</p>
+      </footer>
+    </main>
+  </div>
 
-        <p>
-            Today, I had the incredible honor of becoming the first instructor of the inaugural Big Data and Data Analytics diploma program at Universidad Iberoamericana. It was truly an unforgettable experience that left me inspired, humbled, and filled with gratitude. 
-        </p>
-        <p>
-            Sharing the knowledge and insights I’ve gained throughout my career with eager minds ready to embrace the world of data was a fulfilling and rewarding journey. The opportunity to witness the spark of curiosity and the drive for understanding in every student made me realize the profound impact education can have. 
-        </p>
-        <p>
-            Big Data and Analytics are not just technical skills; they are gateways to discovering new perspectives, enabling businesses to make data-driven decisions, and transforming the world around us. To be part of a pioneering program that is laying the foundation for the next generation of data scientists is a dream come true.
-        </p>
-        <p>
-            As I reflect on this experience, I am deeply thankful for the chance to contribute to shaping the future of the data industry in Mexico, to be an advocate for the power of analytics, and to inspire students to achieve greatness in this ever-evolving field. I cannot wait to see what these brilliant minds will accomplish as they continue to grow and push the boundaries of innovation. 
-        </p>
-        <p>
-            This is only the beginning, and I’m excited to continue this journey, sharing knowledge, learning from others, and contributing to the vibrant field of Big Data and Data Analytics.
-        </p>
-    </section>
-
-    <footer>
-        <p>Connect with me: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a>, <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a>, <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a>, CPS Lab</p>
-    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

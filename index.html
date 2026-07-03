@@ -3,260 +3,100 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Alejandro Salinas, Ph.D. Candidate</title>
-
-  <!-- Bootstrap (you already had this) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-  <!-- Fonts & Icons (new) -->
+  <title>Alejandro Salinas-Medina · PhD Candidate</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- Your styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <!-- Background canvases -->
   <div id="particles-js"></div>
   <div id="galaxy-clusters"></div>
 
-  <!-- Sidebar Nav (kept, but styled as glass) -->
-  <nav>
-    <img src="./photo.jpeg" alt="Alejandro Salinas-Medina" />
-    <h3>Alejandro Salinas-Medina</h3>
+  <div class="mobile-bar">
+    <button class="hamburger" id="navToggle" aria-label="Open navigation" aria-expanded="false"><i class="bi bi-list"></i></button>
+    <div class="mobile-bar__brand">Alejandro Salinas-Medina<span>PhD · McGill · Mila</span></div>
+  </div>
+  <div class="nav-scrim"></div>
 
-    <a href="./index.html">Home</a>
-    <a href="./education.html">Education</a>
-    <a href="./experience.html">Experience</a>
-    <a href="./publications.html">Publications</a>
-    <a href="./courses.html">Courses</a>
-    <a href="./software.html">Software</a>
-    <a href="#posts">News</a>
+  <div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__avatar"><img src="./photo.jpeg" alt="Alejandro Salinas-Medina" /></div>
+    <div class="sidebar__name">Alejandro<br>Salinas-Medina</div>
+    <div class="sidebar__role">PhD · McGill · Mila · The&nbsp;Neuro</div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="./index.html" aria-current="page"><span class="idx">00</span>Home</a><a href="./education.html"><span class="idx">01</span>Education</a><a href="./experience.html"><span class="idx">02</span>Experience</a><a href="./publications.html"><span class="idx">03</span>Publications</a><a href="./courses.html"><span class="idx">04</span>Courses</a><a href="./software.html"><span class="idx">05</span>Software</a><a href="./index.html#posts"><span class="idx">06</span>News</a>
+    </nav>
+    <div class="sidebar__foot">
+      <div class="social"><a href="https://orcid.org/0009-0009-9548-9315" title="ORCID" target="_blank" rel="noopener"><i class="bi bi-fingerprint"></i></a><a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" title="Google Scholar" target="_blank" rel="noopener"><i class="bi bi-mortarboard"></i></a><a href="https://www.linkedin.com/in/alejandro-salinas-medina/" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a><a href="mailto:alejandro.salinas@mail.mcgill.ca" title="Email"><i class="bi bi-envelope"></i></a></div>
+      <button id="themeToggle" class="btn-theme" title="Toggle theme"><i class="bi bi-moon-stars"></i></button>
+    </div>
+  </aside>
+    <main class="main">
+      <header class="hero reveal">
+        <div class="hero__eyebrow">Ph.D. Candidate · <b>McGill</b> · <b>Mila</b> · <b>The Neuro</b></div>
+        <h1><span class="gradient-text">Intelligent systems for modeling complex scientific systems</span></h1>
+        <p class="hero__sub">I build research-driven systems that transform complex biological and physical data into models we can simulate, evaluate, and reason about.</p>
+        <div class="hero__actions">
+          <a class="btn btn-accent" href="mailto:alejandro.salinas@mail.mcgill.ca"><i class="bi bi-envelope"></i> Contact</a>
+          <a class="btn btn-ghost" href="#posts"><i class="bi bi-stars"></i> Latest work</a>
+          <span class="stamp">last update · <b id="lastUpdate">—</b></span>
+        </div>
+      </header>
 
-    <button id="themeToggle" class="btn-theme" title="Toggle theme">
-      <i class="bi bi-moon-stars"></i>
-    </button>
-  </nav>
+      <section id="about" class="section reveal">
+        <div class="eyebrow">§ 00 — About</div>
+        <h2>Short bio</h2>
+        <div class="prose"><p>I'm a Ph.D. candidate in Computer Science at McGill University, affiliated with <strong>MILA</strong> (Quebec AI Institute) and <strong>The Neuro</strong>, where my research focuses on scalable, biologically informed modeling frameworks built on high-resolution multimodal data. My path began with a B.Sc. in Mechatronics Engineering from ITESM and a Master's in Computer Science and Engineering from UNAM, where I built a real-time sign-language translator using deep convolutional networks.</p><p>I've been a teaching assistant at McGill for two years across <strong>COMP 310</strong> (Operating Systems), <strong>COMP 208</strong> (Computer Programming for the Physical Sciences and Engineering), and <strong>COMP 307</strong> (Principles of Web Development), as well as at the Université de Montréal, and served as a guest professor in Big Data &amp; Analytics at Universidad Iberoamericana.</p><p>Alongside academia I bring over a decade of industry experience — Lead Data Scientist at Distillery, AI/ML Cloud Solutions Engineer at <strong>Google</strong>, and Senior Data Scientist at <strong>Coca-Cola</strong>, with earlier roles at <strong>IBM</strong>,  <strong>Lumiata</strong>, and  <strong>P&amp;G</strong> — deploying scalable AI systems and leading cross-functional teams across machine learning, big data, and cloud infrastructure.</p><p>My expertise spans deep learning, computer vision, NLP, and responsible AI. I'm driven by bridging rigorous research with real-world impact — advanced simulation models, AI for medical imaging, and multimodal integration — and turning those into technologies that serve science and society.</p></div>
+        <div class="facts"><div class="fact"><div class="fact__k">Position</div><div class="fact__v">PhD Candidate · 4rd&nbsp;year</div></div><div class="fact"><div class="fact__k">Affiliation</div><div class="fact__v">McGill · Mila · The&nbsp;Neuro</div></div><div class="fact"><div class="fact__k">Focus</div><div class="fact__v">NeuroAI · Simulation · GPU</div></div><div class="fact"><div class="fact__k">Expected</div><div class="fact__v">December 2026</div></div></div>
+      </section>
 
-  <main>
-    <!-- HERO -->
-    <header class="hero">
-      <h1 class="display-6 fw-bold gradient-text">Intelligent Systems for Understanding</h1>
-      <p class="lead hero-sub">
-        Ph.D. candidate (McGill · MILA · The Neuro)
-      </p>
-        <p class="lead hero-sub">
-        Building research-driven systems that make complex signals understandable and useful.
-      </p>
-      <div class="d-flex gap-2 flex-wrap">
-        <a class="btn btn-accent" href="mailto:alejandro.salinas@mail.mcgill.ca">Contact</a>
-        <a class="btn btn-outline-accent" href="#posts">Latest work</a>
-        <span class="last-update">Last update: <span id="lastUpdate">May 2026</span></span>
-      </div>
-    </header>
+      <section id="posts" class="section">
+        <div class="eyebrow reveal">§ 01 — News</div>
+        <h2 class="reveal">Posts &amp; announcements</h2>
+        <div class="card-grid">
+        <article class="card reveal" data-delay="0"><span class="badge">New role</span><div class="card__title">Mila Scientist in Residence — Summer 2026</div><p>I'm glad to share that I was selected for the <strong>Mila Scientist in Residence</strong> program (Summer 2026 cohort), placed with <strong>Dudaji</strong> from June 8 to September 18, 2026.</p><p>The program embeds Mila researchers within partner organizations to bring applied AI research into production settings. Alongside the research work, I'm serving as a mentor to an intern in the program, with academic supervision from Prof. Aaron Courville.</p></article>
+        <article class="card reveal" data-delay="70"><span class="badge">Paper</span><div class="card__title">RAG-Safe — Accepted at Canadian AI 2026</div><p>Our paper <strong>RAG-Safe</strong> (Paper ID 338) was accepted at the <strong>39th Canadian Conference on Artificial Intelligence</strong>, held May 25–29, 2026 at Simon Fraser University, Vancouver.</p><p>RAG-Safe is a recall-first, retrieval-augmented content-moderation framework, comparing two pipeline designs on the Jigsaw toxicity corpus while characterizing the precision trade-offs of each architecture.</p></article>
+        <article class="card reveal" data-delay="140"><span class="badge">Paper</span><div class="card__title">Bifurcation Preservation — AI4Physics @ ICML 2026</div><p>Accepted at the <strong>AI4Physics Workshop at ICML 2026</strong> (Seoul, July 6–11, 2026): <strong>Bifurcation Preservation as a Physics Diagnostic for Neural Phase-Field Surrogates</strong>.</p><p>The work shows a neural-operator surrogate can reach ~9× lower rollout error than a baseline while still shifting the dissolve/persist bifurcation boundary — evidence that low reconstruction error can mask altered dynamics.</p></article>
+        <article class="card reveal" data-delay="0"><span class="badge">Paper</span><div class="card__title">NeuroAgents — Accepted at IEEE EMBC 2026</div><p>Our full paper (ID 1920) was accepted at the <strong>48th IEEE EMBC</strong>, July 26–30, 2026, Toronto: <strong>NeuroAgents: LLM-Based Orchestration of High-Resolution Brain Dynamics Simulations from Natural Language</strong>.</p><p><em>Alejandro Salinas-Medina, Anisleidy Gonzalez-Mitjans, Paule-Joanne Toussaint, Alan Evans, Xue Liu.</em> It scales to large vertex counts where conventional simulators exhaust memory, while maintaining high tool-selection accuracy.</p></article>
+        <article class="card reveal" data-delay="70"><span class="badge">Recognition</span><div class="card__title">VODABI — Mila Joint R&D · Seoul AI Hub Invite</div><p>VODABI was recognized as one of the Best Teams in Mila's Joint R&amp;D Program, with an invitation to represent the project at the Seoul AI Hub.</p><p>At the core is <strong>VOCAS</strong> (VOdabi Conversation Analysis Scoring): a few-shot + RAG pipeline with stage-based scoring and full evidence tracing for compliance and coaching.</p></article>
+        <article class="card reveal" data-delay="140"><span class="badge">Award</span><div class="card__title">Mitacs Globalink Research Award</div><p>Received a <strong>Mitacs Globalink Research Award</strong> for <em>“Multiscale Simulation of Cortical and Hippocampal Dynamics Using Region-Specific Brain Network Models.”</em></p><p>Home supervisor: <em>Alan Evans (McGill)</em> · Host supervisor: <em>Viktor Jirsa (Aix-Marseille)</em>. The award supports travel and research advancing high-resolution, multimodal simulations.</p></article>
+        <article class="card reveal" data-delay="0"><span class="badge">Role · 2025</span><div class="card__title">PhD Research Lead — VODABI × Mila</div><p>Research lead for a VODABI–Mila collaboration on multilingual dialogue state tracking and LLM-based conversation analysis in the financial sector (May–September 2025).</p><p>The sprint targeted an 80% reduction in QA review time and a 15% lift in contract-win prediction, advancing toward a proof-of-concept with a Tier-1 Canadian bank.</p></article>
+        <article class="card reveal" data-delay="70"><span class="badge">Demo</span><div class="card__title">HISRON — Live Demo at IEEE EMBC 2025</div><p>Our paper <em>HISRON: AI-Driven GPU-Accelerated Framework for Scalable High-Resolution Neuroimaging Analysis</em> was selected for a live demonstration at the <strong>47th IEEE EMBC</strong>, Copenhagen (July 14–17, 2025).</p><p>A modular, CUDA-powered pipeline integrating unsupervised learning, zero-shot promptable segmentation, and optimized tiling for high-resolution neuroimaging.</p></article>
+        <article class="card reveal" data-delay="140"><span class="badge">Paper</span><div class="card__title">HISRON — Accepted at IEEE EMBC 2025</div><p>Accepted at the <strong>47th IEEE EMBC</strong>, Osaka (July 23–27, 2025): <strong>1766 — HISRON: AI-Driven GPU-Accelerated Framework for Scalable High-Resolution Neuroimaging Analysis</strong>.</p><p>A CUDA pipeline integrating unsupervised learning, zero-shot promptable segmentation, and optimized tiling for real-time ultra-high-resolution neuroimaging.</p></article>
+        <article class="card reveal" data-delay="0"><span class="badge">Posters</span><div class="card__title">Two Abstracts Accepted — OHBM 2025</div><p>Two abstracts accepted for poster presentation at <strong>OHBM 2025</strong>, Brisbane (June 24–28, 2025):</p><p><strong>3291</strong> — Integrating Multimodal Neuroimaging for Accurate and Efficient Deep Brain Activity Simulations.  <strong>3214</strong> — A GPU-Accelerated Framework for Scalable Multidimensional Analysis of Ultra-High-Resolution Imaging.</p></article>
+        <article class="card reveal" data-delay="70"><span class="badge">Poster</span><div class="card__title">NeuroAgents — Poster at MAIN 2025</div><p>Presented <strong>NeuroAgents</strong> as a poster at <strong>MAIN 2025</strong> (Montreal AI &amp; Neuroscience), December 11–13, 2025 — an early showing of the framework later accepted at IEEE EMBC 2026.</p></article>
+        <article class="card reveal" data-delay="140"><span class="badge">Talk</span><div class="card__title">Poster &amp; Flash Talk — MAIN 2024</div><p><strong>Neuron-Level Analysis of the BigBrain Dataset.</strong> <em>Alejandro Salinas-Medina, Andrija Štajduhar, Claude Y. Lepage, Paule Toussaint, Xue Liu, Alan Evans.</em></p><p>A framework for neuron-level analysis of the BigBrain dataset, focusing on 1-micron sections. <a href="https://www.main2024.org" target="_blank" rel="noopener">main2024.org</a></p></article>
+        <article class="card reveal" data-delay="0"><span class="badge">Attendance</span><div class="card__title">OHBM 2024 — Seoul</div><p>Attended the Organization for Human Brain Mapping annual meeting in Seoul.</p></article>
+        <article class="card reveal" data-delay="70"><span class="badge">Attendance</span><div class="card__title">OHBM 2023 — Montreal</div><p>Attended the Organization for Human Brain Mapping annual meeting in Montreal.</p></article>
+        <article class="card reveal" data-delay="140"><span class="badge">Talk</span><div class="card__title">2021 National Computing Meeting</div><p>Presented “A Real-Time Deep Learning System for the Translation of Mexican Sign Language into Text.” <a href="https://www.youtube.com/watch?v=Guy0dCM3v_w" target="_blank" rel="noopener">Watch demo</a>.</p></article>
+        </div>
+      </section>
 
-  <section id="home">
-      <h2>About Me</h2>
-      <p>Short Bio</p>
-      <p>I'm a Ph.D. candidate in Computer Science at McGill University, affiliated with MILA (Quebec AI Institute) and The Neuro, where my research focuses on developing scalable, biologically informed modeling frameworks using high-resolution multimodal data. My academic journey began with a B.Sc. in Mechatronics Engineering from ITESM and continued with a Master’s in Computer Science and Engineering from UNAM, where I built a real-time sign language translator using deep convolutional networks. I’ve served as a teaching assistant for two years at McGill—across COMP 310 (Operating Systems), COMP 208 (Computer Programming for the Physical Sciences and Engineering), and COMP 307 (Principles of Web Development)—as well as at the Université de Montréal (UdeM), and have previously served as a guest professor in Big Data &amp; Analytics at Universidad Iberoamericana.</p>
-      <p>Alongside my academic work, I bring nearly a decade of industry experience. I’ve worked across roles such as Lead Data Scientist at Distillery, AI/ML Cloud Solutions Engineer at Google, and Senior Data Scientist at Coca-Cola, with additional experience at IBM, Lumiata, and P&G. These roles allowed me to deploy scalable AI systems, lead cross-functional teams, and contribute to projects at the intersection of machine learning, big data, and cloud infrastructure.</p>
-      <p>My expertise spans deep learning, computer vision, NLP, and responsible AI, supported by multiple certifications including Google Cloud’s Professional ML Engineer and the DeepLearning.AI specializations. I’m passionate about bridging rigorous academic research with real-world applications—whether through advanced simulation models, AI for medical imaging, or multimodal integration techniques—and translating those into technologies that can impact science and society.</p>
-    </section>
+      <section id="contact" class="contact reveal">
+        <div class="eyebrow">§ 02 — Contact</div>
+        <h2 style="font-family:'Space Grotesk',sans-serif;font-weight:600;margin-bottom:.3rem">Get in touch</h2>
+        <dl>
+          <dt>Email</dt><dd><a href="mailto:alejandro.salinas@mail.mcgill.ca">alejandro.salinas@mail.mcgill.ca</a> · <a href="mailto:a.salinas.m95@hotmail.com">a.salinas.m95@hotmail.com</a></dd>
+          <dt>Name</dt><dd>Alejandro Salinas-Medina</dd>
+          <dt>Affiliation</dt><dd>MILA / McGill School of Computer Science / The Neuro (MNI-Hospital)</dd>
+          <dt>Position</dt><dd>PhD Candidate (fourth year)</dd>
+          <dt>Graduation</dt><dd>December 2026</dd>
+          <dt>Scholar</dt><dd><a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" target="_blank" rel="noopener">View profile</a></dd>
+        </dl>
+      </section>
 
-    <!-- POSTS -->
-    <section id="posts" class="posts">
-      <h2>Posts - News</h2>
-      <div class="posts-grid">
-        <ul>
-          <li><strong>New Role: Mila Scientist in Residence — Summer 2026 Cohort</strong>
-            <p>I'm glad to share that I was selected for the <strong>Mila Scientist in Residence</strong> program (Summer 2026 cohort), placed with <strong>Dudaji</strong> from June 8 to September 18, 2026.</p>
-            <p>The program embeds Mila researchers within partner organizations to bring applied AI research into production settings. Alongside the research work, I'm serving as a mentor to an intern in the program, with academic supervision from Prof. Aaron Courville.</p>
-            <p>I'm looking forward to a summer of translating research methods into deployable systems—and to the collaboration this residency makes possible.</p>
-          </li>
-        </ul>
+      <footer class="site-footer reveal">
+        <p>Connect: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a> ·
+           <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a> ·
+           <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a></p>
+        <p class="mono">© <span id="yr"></span> Alejandro Salinas-Medina — mapping the cosmos of the brain.</p>
+      </footer>
+    </main>
+  </div>
 
-        <ul>
-          <li><strong>Paper Accepted at Canadian AI 2026 — RAG-Safe</strong>
-            <p>I'm glad to share that our paper <strong>RAG-Safe</strong> (Paper ID 338) was accepted at the <strong>39th Canadian Conference on Artificial Intelligence (Canadian AI 2026)</strong>, held May 25–29, 2026 at Simon Fraser University, Vancouver, BC.</p>
-            <p>RAG-Safe is a recall-first, retrieval-augmented content-moderation framework. The paper compares two pipeline designs on the Jigsaw toxicity corpus, prioritizing recall in safety-critical screening while characterizing the precision trade-offs of each architecture.</p>
-          </li>
-        </ul>
-
-        <ul>
-          <li><strong>Paper Accepted at the AI4Physics Workshop, ICML 2026</strong>
-            <p>I'm happy to share that our paper was accepted at the <strong>AI4Physics Workshop at ICML 2026</strong> (Seoul, South Korea, July 6–11, 2026):</p>
-            <p><strong>Bifurcation Preservation as a Physics Diagnostic for Neural Phase-Field Surrogates</strong></p>
-            <p>The work shows that a neural-operator surrogate can achieve roughly 9× lower rollout error than a baseline while still shifting the underlying dissolve/persist bifurcation boundary — evidence that low reconstruction error can mask altered dynamics, and that bifurcation structure is a more faithful diagnostic for physical surrogates.</p>
-          </li>
-        </ul>
-
-        <ul>
-          <li><strong>Paper Accepted at IEEE EMBC 2026 — NeuroAgents</strong>
-            <p>I'm pleased to share that our full paper (ID 1920) was accepted for presentation at the <strong>48th Annual IEEE Engineering in Medicine and Biology Society Conference (EMBC 2026)</strong>, July 26–30, 2026, at the Metro Toronto Convention Centre, Toronto, Canada.</p>
-            <p><strong>NeuroAgents: LLM-Based Orchestration of High-Resolution Brain Dynamics Simulations from Natural Language</strong></p>
-            <p><em>Alejandro Salinas-Medina, Anisleidy Gonzalez-Mitjans, Paule-Joanne Toussaint, Alan Evans, Xue Liu</em></p>
-            <p>NeuroAgents is an LLM-orchestrated framework for composing brain-simulation workflows from natural-language instructions. It scales to large vertex counts where conventional simulators exhaust memory on geodesic-kernel construction, while maintaining high tool-selection accuracy across benchmark tasks.</p>
-          </li>
-        </ul>
-
-        <ul>
-          <li><strong>VODABI Recognized in Mila’s Joint R&D — Seoul AI Hub Invite</strong>
-            <p>Grateful to our team and partners—VODABI was recognized as one of the Best Teams in Mila’s Joint R&amp;D Program. I’m honored to represent the project with an invitation from Seoul AI Hub.</p>
-            <p>At the core is <strong>VOCAS</strong> (VOdabi Conversation Analysis Scoring): a few-shot + RAG pipeline with stage-based scoring and full evidence tracing for compliance and coaching. This recognition reflects many iterations, late-night debugging, and careful evaluation—thank you Samuel and the VODABI/Mila teams for the constant support.</p>
-            <p>We’re now discussing PoCs beyond Korea while continuing to harden the scoring logic for regulated environments. More technical details and dashboards coming soon.</p>
-          </li>
-        </ul>
-
-        <ul>
-          <li><strong>Mitacs Globalink Research Award — Conditional Approval</strong>
-            <p>Thrilled to share that I received a <strong>Mitacs Globalink Research Award (GRA)</strong> for the project <em>“Multiscale Simulation of Cortical and Hippocampal Dynamics Using Region-Specific Brain Network Models.”</em></p>
-            <p>Home supervisor: <em>Alan Evans (McGill University)</em> · Host supervisor: <em>Viktor Jirsa (Aix-Marseille Université)</em>. The award supports travel and research costs to advance high-resolution, multimodal simulations aligned with my RSBNM framework.</p>
-            <p>Big thanks to my advisors and collaborators—the support accelerates the bridge between GPU-accelerated segmentation and biologically realistic simulations that we’ve been developing.</p>
-          </li>
-        </ul>
-
-        <ul>
-          <li><strong>New Role: PhD Research Lead for VODABI-Mila Collaboration (May–September 2025)</strong>
-            <p>I'm excited to take on the role of PhD research lead for a collaborative project between <strong>VODABI</strong> and <strong>Mila</strong> focused on multilingual dialogue state tracking and LLM-based conversation analysis in the financial sector.</p>
-            <p>This applied research sprint aims to reduce QA review time by 80% and improve contract-win prediction accuracy by 15%. We're now advancing toward real-time summarization tools for agents and deploying a proof-of-concept system with a Tier-1 Canadian bank.</p>
-            <p>This role has been a rewarding opportunity to translate cutting-edge academic research into high-impact, production-ready AI systems.</p>
-          </li>
-        </ul>
-
-        <ul>
-          <li><strong>Selected for Live Demo at IEEE EMBC 2025</strong>
-            <p>I'm honored to share that our paper <em>"HISRON: AI-Driven GPU-Accelerated Framework for Scalable High-Resolution Neuroimaging Analysis"</em>, accepted at the <strong>47th Annual IEEE Engineering in Medicine and Biology Society (EMBC) Conference</strong>, has been selected for a live demonstration during the event in Copenhagen, Denmark (July 14–17, 2025).</p>
-            <p>Great opportunity to showcase the real-world potential of our modular, CUDA-powered pipeline, which integrates unsupervised learning, zero-shot promptable segmentation, and optimized tiling strategies for high-resolution neuroimaging analysis.</p>
-            <p>Looking forward to showcasing our system to the EMBC community!</p>
-          </li>
-        </ul>
-
-        <ul>
-          <li><strong>Exciting News! Paper Accepted at IEEE EMBC 2025</strong>
-            <p>I'm excited to announce that our paper has been accepted for presentation at the <strong>47th Annual IEEE Engineering in Medicine and Biology Society (EMBC) Conference</strong>, which will be held in Osaka, Japan, from July 23 to July 27, 2025!</p>
-            <p><strong>1766 - HISRON: AI-Driven GPU-Accelerated Framework for Scalable High-Resolution Neuroimaging Analysis</strong></p>
-            <p>This work presents a modular, CUDA-powered pipeline that integrates unsupervised learning, zero-shot promptable segmentation, and optimized tiling strategies to enable real-time processing of ultra-high-resolution neuroimaging data. I'm looking forward to sharing this research with the EMBC community!</p>
-          </li>
-        </ul>
-
-        <ul>
-          <li><strong>Exciting News! Two Accepted Abstracts at OHBM 2025</strong>
-            <p>I'm thrilled to share that two of my abstracts have been accepted for poster presentations at the <strong>OHBM 2025 Annual Meeting</strong>, which will take place in Brisbane, Australia, from June 24 to June 28, 2025!</p>
-            <p><strong>3291 - Integrating Multimodal Neuroimaging for Accurate and Efficient Deep Brain Activity Simulations</strong></p>
-            <p><strong>3214 - A GPU-Accelerated Framework for Scalable Multidimensional Analysis of Ultra-High-Resolution Imaging</strong></p>
-            <p>I'm looking forward to presenting my work and engaging with the global neuroimaging community. Stay tuned for more details on my presentations!</p>
-          </li>
-        </ul>
-
-        <ul>
-          <li><strong>NeuroAgents Poster at MAIN 2025</strong>
-            <p>I presented <strong>NeuroAgents</strong> as a poster at the <strong>MAIN 2025</strong> meeting (Montreal Artificial Intelligence and Neuroscience), held December 11–13, 2025.</p>
-            <p>"NeuroAgents: LLM-Based Orchestration of High-Resolution Brain Dynamics Simulations from Natural Language" — an early showing of the framework later accepted at IEEE EMBC 2026. Great venue for feedback from the Montreal AI–neuroscience community.</p>
-          </li>
-        </ul>
-
-        <ul>
-          <li><strong>Poster and Flash Talk at MAIN 2024</strong> (<a href="https://www.main2024.org">https://www.main2024.org</a>):
-            <p>"Neuron-Level Analysis of the BigBrain Dataset"</p>
-            <p><em>Alejandro Salinas-Medina, Andrija Štajduhar, Claude Y. Lepage, Paule Toussaint, Xue Liu, Alan Evans</em></p>
-            <p>McGill University</p>
-            <p>Contact: <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" target="_blank">Google Scholar</a></p>
-            <p>This study presents a comprehensive framework for conducting neuron-level analysis of the BigBrain dataset, focusing on 1-micron sections…</p>
-          </li>
-        </ul>
-
-        <ul><li><strong>OHBM 2024 Seoul Attendance</strong></li></ul>
-        <ul><li><strong>OHBM 2023 Montreal Attendance</strong></li></ul>
-
-        <ul>
-          <li><strong>2021 National Computing Meeting</strong>:
-          <p>I presented "A Real-Time Deep Learning System for the Translation of Mexican Sign Language into Text"…</p>
-          <p><a href="https://www.youtube.com/watch?v=Guy0dCM3v_w" target="_blank">Watch Demo</a></p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="contact-info">
-      <h2>Contact Information</h2>
-      <p><strong>Email:</strong> <a href="mailto:alejandro.salinas@mail.mcgill.ca">alejandro.salinas@mail.mcgill.ca</a>; <a href="mailto:a.salinas.m95@hotmail.com">a.salinas.m95@hotmail.com</a></p>
-      <p><strong>Name:</strong> Alejandro Salinas-Medina</p>
-      <p><strong>Affiliation:</strong> MILA / McGill University School of Computer Science / The Neuro (Montreal Neurological Institute-Hospital)</p>
-      <p><strong>Position:</strong> PhD Candidate (Third year)</p>
-      <p><strong>Expected Graduation:</strong> December 2026</p>
-      <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" target="_blank">View Profile</a></p>
-    </section>
-
-    <footer>
-      <p>Connect with me:
-        <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a>,
-        <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a>,
-        <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a>
-      </p>
-    </footer>
-  </main>
-
-  <!-- Particles -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
-  <script>
-  particlesJS("particles-js", {
-    particles: {
-      number: { value: 80, density: { enable: true, value_area: 800 } },
-      color: { value: ["#ffffff", "#00ccff", "#99ccff", "#66ffff"] },
-      shape: { type: "circle" },
-      opacity: { value: 0.6, random: true, anim: { enable: true, speed: 0.8, opacity_min: 0.25, sync: false } },
-      size: { value: 5, random: true, anim: { enable: true, speed: 4, size_min: 1, sync: false } },
-      line_linked: { enable: false },
-      move: { enable: true, speed: 0.5, random: true, out_mode: "out" }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
-      modes: { repulse: { distance: 120 }, push: { particles_nb: 3 } }
-    },
-    retina_detect: true
-  });
-
-  particlesJS("galaxy-clusters", {
-    particles: {
-      number: { value: 20, density: { enable: true, value_area: 1200 } },
-      color: { value: ["#663399", "#aa00ff", "#ff66cc", "#9900cc"] },
-      shape: { type: "circle" },
-      opacity: { value: 0.18, random: true, anim: { enable: true, speed: 0.5, opacity_min: 0.05, sync: false } },
-      size: { value: 80, random: true, anim: { enable: true, speed: 1.2, size_min: 40, sync: false } },
-      line_linked: { enable: false },
-      move: { enable: true, speed: 0.12, random: true, out_mode: "out" }
-    },
-    interactivity: { events: { onhover: { enable: false }, onclick: { enable: false } } },
-    retina_detect: true
-  });
-
-  // Theme toggle + persist
-  (function(){
-    const root = document.documentElement;
-    const key  = 'site-theme';
-    const btn  = document.getElementById('themeToggle');
-    const saved = localStorage.getItem(key);
-    if(saved){ root.setAttribute('data-theme', saved); }
-    btn?.addEventListener('click', ()=>{
-      const next = root.getAttribute('data-theme')==='light' ? 'dark' : 'light';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem(key, next);
-      btn.innerHTML = next==='light' ? '<i class="bi bi-sun"></i>' : '<i class="bi bi-moon-stars"></i>';
-    });
-  })();
-
-  // Auto-set last update month/year
-  (function(){
-    const el = document.getElementById('lastUpdate');
-    if(!el) return;
-    const d = new Date();
-    el.textContent = d.toLocaleString('en-US',{month:'long'})+' '+d.getFullYear();
-  })();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

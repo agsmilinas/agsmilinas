@@ -1,203 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Publications - Alejandro Salinas, Ph.D. Candidate</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #fff; /* White font */
-            background-color: #000; /* Background color */
-            position: relative;
-            z-index: 5;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-            z-index: 5; /* Front */
-            font-size: 2em; /* Increased font size */
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 15px;
-            position: relative;
-            z-index: 5;
-        }
-
-        nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            transition: color 0.3s;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        nav a:hover {
-            color: #4CAF50;
-        }
-
-        section {
-            padding: 30px;
-            max-width: 1200px;
-            margin: 30px auto;
-            position: relative;
-            z-index: 5;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .quote {
-            font-style: italic;
-            margin: 20px 0;
-            text-align: center;
-        }
-
-        .publications ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .publications ul li {
-            margin: 20px 0;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            position: relative;
-            z-index: 5;
-            font-size: 1.2em; /* Increased font size */
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #4CAF50;
-            text-decoration: underline;
-        }
-
-        footer a:hover {
-            color: #fff;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav a {
-                margin: 10px 0;
-            }
-
-            section {
-                padding: 20px;
-                margin: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 10px 0;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            h2 {
-                font-size: 1.4em;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications — Alejandro Salinas-Medina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Publications</h1>
-    </header>
+  <div id="particles-js"></div>
+  <div id="galaxy-clusters"></div>
 
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./education.html">Education/Certifications</a>
-        <a href="./experience.html">Experience</a>
-        <a href="./publications.html">Publications</a>
-        <a href="./courses.html">Courses</a>
-        <a href="./software.html">Software</a>
-        <a href="#posts">Posts/News</a>
+  <div class="mobile-bar">
+    <button class="hamburger" id="navToggle" aria-label="Open navigation" aria-expanded="false"><i class="bi bi-list"></i></button>
+    <div class="mobile-bar__brand">Alejandro Salinas-Medina<span>PhD · McGill · Mila</span></div>
+  </div>
+  <div class="nav-scrim"></div>
+
+  <div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__avatar"><img src="./photo.jpeg" alt="Alejandro Salinas-Medina" /></div>
+    <div class="sidebar__name">Alejandro<br>Salinas-Medina</div>
+    <div class="sidebar__role">PhD · McGill · Mila · The&nbsp;Neuro</div>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="./index.html"><span class="idx">00</span>Home</a><a href="./education.html"><span class="idx">01</span>Education</a><a href="./experience.html"><span class="idx">02</span>Experience</a><a href="./publications.html" aria-current="page"><span class="idx">03</span>Publications</a><a href="./courses.html"><span class="idx">04</span>Courses</a><a href="./software.html"><span class="idx">05</span>Software</a><a href="./index.html#posts"><span class="idx">06</span>News</a>
     </nav>
+    <div class="sidebar__foot">
+      <div class="social"><a href="https://orcid.org/0009-0009-9548-9315" title="ORCID" target="_blank" rel="noopener"><i class="bi bi-fingerprint"></i></a><a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl" title="Google Scholar" target="_blank" rel="noopener"><i class="bi bi-mortarboard"></i></a><a href="https://www.linkedin.com/in/alejandro-salinas-medina/" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a><a href="mailto:alejandro.salinas@mail.mcgill.ca" title="Email"><i class="bi bi-envelope"></i></a></div>
+      <button id="themeToggle" class="btn-theme" title="Toggle theme"><i class="bi bi-moon-stars"></i></button>
+    </div>
+  </aside>
+    <main class="main">
+      <header class="hero reveal">
+        <div class="hero__eyebrow">Peer-reviewed &amp; conference work</div>
+        <h1><span class="gradient-text">Publications</span></h1>
+        <p class="hero__sub">Selected papers across deep learning, computer vision, and computational epidemiology.</p>
+      </header>
 
-    <section class="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li><strong>A Real-Time Deep Learning System for the Translation of Mexican Sign Language into Text</strong><br>
-                SM Alejandro, NCJ Antonio<br>
-                <em>2021 Mexican International Conference on Computer Science (ENC), 1-7</em><br>
-                <strong>2021</strong>
-                DOI: <a href="https://doi.org/10.1109/ENC53357.2021.9534825">https://doi.org/10.1109/ENC53357.2021.9534825</a>
-            </li>
+      <section class="section">
+        <div class="eyebrow reveal">§ Papers</div>
+        <h2 class="reveal">Selected publications</h2>
+        <article class="pub reveal"><div class="pub__title">NeuroAgents: LLM-Based Orchestration of High-Resolution Brain Dynamics Simulations from Natural Language</div><div class="pub__meta">A. Salinas-Medina, A. Gonzalez-Mitjans, P.-J. Toussaint, A. Evans, X. Liu</div><div class="pub__meta"><em>48th Annual IEEE Engineering in Medicine &amp; Biology Society Conference (EMBC 2026), Toronto, Canada</em> · <span class="pub__year">2026</span></div><div class="pub__meta">Paper ID 1920</div></article><article class="pub reveal"><div class="pub__title">Bifurcation Preservation as a Physics Diagnostic for Neural Phase-Field Surrogates</div><div class="pub__meta">A. Salinas-Medina, et al.</div><div class="pub__meta"><em>AI4Physics Workshop, ICML 2026, Seoul, South Korea</em> · <span class="pub__year">2026</span></div></article><article class="pub reveal"><div class="pub__title">RAG-Safe: A Recall-First Retrieval-Augmented Framework for Content Moderation</div><div class="pub__meta">A. Salinas-Medina, et al.</div><div class="pub__meta"><em>39th Canadian Conference on Artificial Intelligence (Canadian AI 2026), Simon Fraser University, Vancouver, BC</em> · <span class="pub__year">2026</span></div><div class="pub__meta">Paper ID 338</div></article><article class="pub reveal"><div class="pub__title">HISRON: AI-Driven GPU-Accelerated Framework for Scalable High-Resolution Neuroimaging Analysis</div><div class="pub__meta">A. Salinas-Medina, et al.</div><div class="pub__meta"><em>47th Annual IEEE Engineering in Medicine &amp; Biology Society Conference (EMBC 2025), Osaka, Japan</em> · <span class="pub__year">2025</span></div><div class="pub__meta">Paper ID 1766</div></article><article class="pub reveal"><div class="pub__title">A Real-Time Deep Learning System for the Translation of Mexican Sign Language into Text</div><div class="pub__meta">S.-M. Alejandro, N.-C. J. Antonio</div><div class="pub__meta"><em>2021 Mexican International Conference on Computer Science (ENC), 1–7</em> · <span class="pub__year">2021</span></div><div class="pub__meta">DOI: <a href="https://doi.org/10.1109/ENC53357.2021.9534825" target="_blank" rel="noopener">https://doi.org/10.1109/ENC53357.2021.9534825</a></div></article><article class="pub reveal"><div class="pub__title">A Live Emotions Predictor System Using Convolutional Neural Networks</div><div class="pub__meta">A. Salinas-Medina, H. Poblano-Rosas, M. R. Bustamante-Bello, et al.</div><div class="pub__meta"><em>2019 International Conference on Mechatronics, Electronics and Automotive</em> · <span class="pub__year">2019</span></div><div class="pub__meta">DOI: <a href="https://doi.org/10.1109/ICMEAE.2019.00013" target="_blank" rel="noopener">https://doi.org/10.1109/ICMEAE.2019.00013</a></div></article><article class="pub reveal"><div class="pub__title">Enhancing Hospital Efficiency Through Web-Deployed Object Detection: A YOLOv8-Based Approach for Automating Healthcare Operations</div><div class="pub__meta">A. Salinas-Medina, A. Neme</div><div class="pub__meta"><em>2023 Mexican International Conference on Computer Science (ENC), 1–6</em> · <span class="pub__year">2023</span></div><div class="pub__meta">DOI: <a href="https://doi.org/10.1109/ENC60556.2023.10508642" target="_blank" rel="noopener">https://doi.org/10.1109/ENC60556.2023.10508642</a></div></article><article class="pub reveal"><div class="pub__title">EpI-PUMA: Plataforma Universitaria de Inteligencia Epidemiológica de SARS-CoV-2, Versión 1.0</div><div class="pub__meta">A. Salinas-Medina, G. E. G. Peña, J. L. Gordillo, R. Calero, P. R. Martínez, et al.</div><div class="pub__meta"><em>Revista TIES, UNAM</em> · <span class="pub__year">2023</span></div><div class="pub__meta">DOI: <a href="https://www.ties.unam.mx/num07/assets/files/1_EpI_PUMA_Plataforma_Universitaria_de_Inteligencia_Epidemiologica_de_SARS_CoV_2_Version_1_0.pdf" target="_blank" rel="noopener">https://www.ties.unam.mx/num07/assets/files/1_EpI_PUMA_Plataforma_Universitaria_de_Inteligencia_Epidemiologica_de_SARS_CoV_2_Version_1_0.pdf</a></div></article><article class="pub reveal"><div class="pub__title">El Papel de las Plataformas Geoespaciales de Monitoreo Epidemiológico en la Mitigación de las Pandemias</div><div class="pub__meta">G. Adrián, S. Christopher, S.-M. Alejandro, et al.</div><div class="pub__meta"><em>La Década COVID en México 14, 313–342</em> · <span class="pub__year">2023</span></div></article><article class="pub reveal"><div class="pub__title">La Probabilidad de Existir o No Existir: Teoría del Nicho y Ciencia de Datos para Estudiar la COVID</div><div class="pub__meta">G. E. G. Peña, R. Calero, A. Salinas-Medina, J. L. Gordillo</div><div class="pub__meta"><em>Mixcoac</em> · <span class="pub__year">2023</span></div></article>
+      </section>
 
-            <li><strong>A Live Emotions Predictor System Using Convolutional Neural Networks</strong><br>
-                A Salinas-Medina, H Poblano-Rosas, MR Bustamante-Bello, ...<br>
-                <em>2019 International Conference on Mechatronics, Electronics and Automotive</em><br>
-                <strong>2019</strong>
-                DOI: <a href="https://doi.org/10.1109/ICMEAE.2019.00013">https://doi.org/10.1109/ICMEAE.2019.00013</a>
-            </li>
+      <footer class="site-footer reveal">
+        <p>Connect: <a href="https://orcid.org/0009-0009-9548-9315">ORCID</a> ·
+           <a href="https://scholar.google.com/citations?user=UXIDPngAAAAJ&hl">Google Scholar</a> ·
+           <a href="https://www.linkedin.com/in/alejandro-salinas-medina/">LinkedIn</a></p>
+        <p class="mono">© <span id="yr"></span> Alejandro Salinas-Medina — mapping the cosmos of the brain.</p>
+      </footer>
+    </main>
+  </div>
 
-            <li><strong>Enhancing Hospital Efficiency Through Web-Deployed Object Detection: A YOLOv8-Based Approach for Automating Healthcare Operations</strong><br>
-                A Salinas-Medina, A Neme<br>
-                <em>2023 Mexican International Conference on Computer Science (ENC), 1-6</em><br>
-                <strong>2023</strong>
-                DOI: <a href="https://doi.org/10.1109/ENC60556.2023.10508642">https://doi.org/10.1109/ENC60556.2023.10508642</a>
-            </li>
-                
-
-            <li><strong>Epl-PUMA EpI-PUMA: Plataforma Universitaria de Inteligencia Epidemiológica de SARS-CoV-2, Versión 1.0</strong><br>
-                A Salinas-Medina, GEG Peña, JL Gordillo, R Calero, PR Martínez, ...<br>
-                <a href="https://www.ties.unam.mx/num07/assets/files/1_EpI_PUMA_Plataforma_Universitaria_de_Inteligencia_Epidemiologica_de_SARS_CoV_2_Version_1_0.pdf" target="_blank">https://www.ties.unam.mx/num07/1-epl-puma.html</a><br>
-                <strong>2023</strong></li>
-
-            <li><strong>El Papel de las Plataformas Geoespaciales de Monitoreo Epidemiológico en la Mitigación de las Pandemias</strong><br>
-                G Adrián, S Christopher, SM Alejandro, et. al.<br>
-                <em>La Década COVID en México 14, 313,342</em><br>
-                <strong>2023</strong></li>
-
-            <li><strong>La Probabilidad de Existir o No Existir: Teoría del Nicho y Ciencia de Datos para Estudiar la COVID</strong><br>
-                GEG Peña, R Calero, A Salinas-Medina, JL Gordillo<br>
-                <em>Mixcoac</em><br>
-                <strong>2023</strong></li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>Connect with me: <a href="#">ORCID</a>, <a href="#">Google Scholar</a>, <a href="#">SCOPUS</a>, Applied Math and Computer Science Lab</p>
-    </footer>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
